@@ -29,7 +29,7 @@ import Reward from "views/examples/Reward.js";
 import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
-import Challenge from "./views/examples/Challenge";
+import Challenge from "./views/challengePage/Challenge";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
