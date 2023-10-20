@@ -1,13 +1,20 @@
 import React from 'react';
 import ChallengeCards from "./challengePage/ChallengeCards";
+import NavigationBar from "./NavigationBar.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ChallengeCard from "./challengePage/ChallengeCard";
+import Test from "./Test";
 
 const App = () => {
     return (
         <>
-        <div>
-            <h1>Hello, world!</h1>
-        </div>
-        <ChallengeCards />
+            <NavigationBar />
+            <BrowserRouter>
+                <Routes>
+                        <Route path="/challengeCards" element={<ChallengeCards />} />
+                        <Route path="/test" element={<Test />} />
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }
