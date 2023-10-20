@@ -43,7 +43,7 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 // index page sections
 import Download from "../IndexSections/Download.js";
 
-class Challenge extends React.Component {
+class Reward extends React.Component {
   state = {};
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -74,7 +74,7 @@ class Challenge extends React.Component {
                   <Row>
                     <Col lg="6">
                       <h1 className="display-3 text-white">
-                        Challenge{" "}
+                        A beautiful Design System{" "}
                         <span>completed with examples</span>
                       </h1>
                       <p className="lead text-white">
@@ -870,4 +870,4 @@ class Challenge extends React.Component {
   }
 }
 
-export default Challenge;
+export default Reward;
