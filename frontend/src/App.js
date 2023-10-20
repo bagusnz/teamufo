@@ -2,7 +2,6 @@ import React from 'react';
 import ChallengeCards from "./challengePage/ChallengeCards";
 import NavigationBar from "./NavigationBar.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ChallengeCard from "./challengePage/ChallengeCard";
 import Test from "./Test";
 
 const App = () => {
