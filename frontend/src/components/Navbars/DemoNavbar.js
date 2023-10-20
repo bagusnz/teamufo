@@ -123,7 +123,7 @@ class DemoNavbar extends React.Component {
                   </UncontrolledDropdown>
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
-                      <NavLink to="/landing-page" tag={Link}>
+                      <NavLink to="/reward-page" tag={Link}>
                       <i className="ni ni-collection d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Rewards</span>
                         </NavLink>
