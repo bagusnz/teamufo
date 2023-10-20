@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 const ChallengeCard = ({challenge, points, setPoints}) => {
     //TODO: get userid from Cache? or from backend?
@@ -9,13 +11,16 @@ const ChallengeCard = ({challenge, points, setPoints}) => {
        setTodo(!todo);
     }
     return (
-        <div>
-            <h2>{challenge.title}</h2>
-            <h3>{`${challenge.point} Point(s)`}</h3>
-            <button onClick={handleTodo}>
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="holder.js/100px180" alt="Images"/>
+            <Card.Body>
+            <Card.Title>{challenge.title}</Card.Title>
+            <Card.Text>{`${challenge.point} Point(s)`}</Card.Text>
+            <Button variant="outline-primary" onClick={handleTodo}>
                 {todo ? "to do" : "Done"}
-            </button>
-        </div>
+            </Button>
+                </Card.Body>
+        </Card>
     );
 }
 
