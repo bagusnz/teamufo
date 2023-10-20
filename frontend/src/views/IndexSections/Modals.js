@@ -56,7 +56,6 @@ const Modals = () => {
             </Button>
             <Modal
               className="modal-dialog-centered"
-              isOpen={this.state.defaultModal}
               toggle={() => this.toggleModal("defaultModal")}
             >
               <div className="modal-header">
@@ -115,7 +114,7 @@ const Modals = () => {
             <Modal
               className="modal-dialog-centered modal-danger"
               contentClassName="bg-gradient-danger"
-              isOpen={this.state.notificationModal}
+
               toggle={() => this.toggleModal("notificationModal")}
             >
               <div className="modal-header">
@@ -170,7 +169,7 @@ const Modals = () => {
             <Modal
               className="modal-dialog-centered"
               size="sm"
-              isOpen={this.state.formModal}
+
               toggle={() => this.toggleModal("formModal")}
             >
               <div className="modal-body p-0">
@@ -216,9 +215,6 @@ const Modals = () => {
                     </div>
                     <Form role="form">
                       <FormGroup
-                        className={classnames("mb-3", {
-                          focused: this.state.emailFocused,
-                        })}
                       >
                         <InputGroup className="input-group-alternative">
                           <InputGroupAddon addonType="prepend">
@@ -238,11 +234,7 @@ const Modals = () => {
                           />
                         </InputGroup>
                       </FormGroup>
-                      <FormGroup
-                        className={classnames({
-                          focused: this.state.passwordFocused,
-                        })}
-                      >
+                      <FormGroup>
                         <InputGroup className="input-group-alternative">
                           <InputGroupAddon addonType="prepend">
                             <InputGroupText>

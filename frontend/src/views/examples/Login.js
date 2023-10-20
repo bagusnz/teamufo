@@ -42,7 +42,7 @@ const Login = () => {
     return (
       <>
         <DemoNavbar />
-        <main ref="main">
+
           <section className="section section-shaped section-lg">
             <div className="shape shape-style-1 bg-gradient-default">
               <span />
@@ -177,7 +177,7 @@ const Login = () => {
               </Row>
             </Container>
           </section>
-        </main>
+
         <SimpleFooter />
       </>
     );

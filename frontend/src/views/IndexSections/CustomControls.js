@@ -159,7 +159,6 @@ const CustomControls = () => {
               <Row className="mt-3 d-none">
                 <Col xs="6">
                   <span className="range-slider-value">
-                    {this.state.simpleValue}
                   </span>
                 </Col>
               </Row>
@@ -171,12 +170,10 @@ const CustomControls = () => {
               <Row className="d-none">
                 <Col xs="6">
                   <span className="range-slider-value value-low">
-                    {this.state.rangeLow}
                   </span>
                 </Col>
                 <Col className="text-right" xs="6">
                   <span className="range-slider-value value-high">
-                    {this.state.rangeHigh}
                   </span>
                 </Col>
               </Row>

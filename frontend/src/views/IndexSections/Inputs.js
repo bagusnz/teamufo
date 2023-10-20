@@ -40,9 +40,7 @@ const Inputs = () => {
                   <Input placeholder="Regular" type="text" />
                 </FormGroup>
                 <FormGroup
-                  className={classnames({
-                    focused: this.state.searchFocused,
-                  })}
+
                 >
                   <InputGroup className="mb-4">
                     <InputGroupAddon addonType="prepend">
@@ -53,8 +51,6 @@ const Inputs = () => {
                     <Input
                       placeholder="Search"
                       type="text"
-                      onFocus={(e) => this.setState({ searchFocused: true })}
-                      onBlur={(e) => this.setState({ searchFocused: false })}
                     />
                   </InputGroup>
                 </FormGroup>
@@ -64,16 +60,11 @@ const Inputs = () => {
                   <Input disabled placeholder="Regular" type="text" />
                 </FormGroup>
                 <FormGroup
-                  className={classnames({
-                    focused: this.state.birthdayFocused,
-                  })}
                 >
                   <InputGroup className="mb-4">
                     <Input
                       placeholder="Birthday"
                       type="text"
-                      onFocus={(e) => this.setState({ birthdayFocused: true })}
-                      onBlur={(e) => this.setState({ birthdayFocused: false })}
                     />
                     <InputGroupAddon addonType="append">
                       <InputGroupText>
@@ -119,9 +110,7 @@ const Inputs = () => {
                     />
                   </FormGroup>
                   <FormGroup
-                    className={classnames({
-                      focused: this.state.searchAltFocused,
-                    })}
+
                   >
                     <InputGroup className="input-group-alternative mb-4">
                       <InputGroupAddon addonType="prepend">
@@ -152,20 +141,13 @@ const Inputs = () => {
                     />
                   </FormGroup>
                   <FormGroup
-                    className={classnames({
-                      focused: this.state.birthdayAltFocused,
-                    })}
+
                   >
                     <InputGroup className="input-group-alternative mb-4">
                       <Input
                         placeholder="Birthday"
                         type="text"
-                        onFocus={(e) =>
-                          this.setState({ birthdayAltFocused: true })
-                        }
-                        onBlur={(e) =>
-                          this.setState({ birthdayAltFocused: false })
-                        }
+
                       />
                       <InputGroupAddon addonType="append">
                         <InputGroupText>

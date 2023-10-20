@@ -29,7 +29,7 @@ const Profile = () => {
     return (
       <>
         <DemoNavbar />
-        <main className="profile-page" ref="main">
+        <main className="profile-page">
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}
             <div className="shape shape-style-1 shape-default alpha-4">

@@ -53,10 +53,7 @@ const TabsSection = () => {
               >
                 <NavItem>
                   <NavLink
-                    aria-selected={this.state.iconTabs === 1}
-                    className={classnames("mb-sm-3 mb-md-0", {
-                      active: this.state.iconTabs === 1,
-                    })}
+
                     onClick={(e) => this.toggleNavs(e, "iconTabs", 1)}
                     href="#pablo"
                     role="tab"
@@ -67,10 +64,7 @@ const TabsSection = () => {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    aria-selected={this.state.iconTabs === 2}
-                    className={classnames("mb-sm-3 mb-md-0", {
-                      active: this.state.iconTabs === 2,
-                    })}
+
                     onClick={(e) => this.toggleNavs(e, "iconTabs", 2)}
                     href="#pablo"
                     role="tab"
@@ -81,10 +75,7 @@ const TabsSection = () => {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    aria-selected={this.state.iconTabs === 3}
-                    className={classnames("mb-sm-3 mb-md-0", {
-                      active: this.state.iconTabs === 3,
-                    })}
+
                     onClick={(e) => this.toggleNavs(e, "iconTabs", 3)}
                     href="#pablo"
                     role="tab"
@@ -97,7 +88,7 @@ const TabsSection = () => {
             </div>
             <Card className="shadow">
               <CardBody>
-                <TabContent activeTab={"iconTabs" + this.state.iconTabs}>
+                <TabContent>
                   <TabPane tabId="iconTabs1">
                     <p className="description">
                       Raw denim you probably haven't heard of them jean shorts
@@ -149,10 +140,7 @@ const TabsSection = () => {
               >
                 <NavItem>
                   <NavLink
-                    aria-selected={this.state.plainTabs === 1}
-                    className={classnames("mb-sm-3 mb-md-0", {
-                      active: this.state.plainTabs === 1,
-                    })}
+
                     onClick={(e) => this.toggleNavs(e, "plainTabs", 1)}
                     href="#pablo"
                     role="tab"
@@ -162,10 +150,7 @@ const TabsSection = () => {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    aria-selected={this.state.plainTabs === 2}
-                    className={classnames("mb-sm-3 mb-md-0", {
-                      active: this.state.plainTabs === 2,
-                    })}
+
                     onClick={(e) => this.toggleNavs(e, "plainTabs", 2)}
                     href="#pablo"
                     role="tab"
@@ -175,10 +160,7 @@ const TabsSection = () => {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    aria-selected={this.state.plainTabs === 3}
-                    className={classnames("mb-sm-3 mb-md-0", {
-                      active: this.state.plainTabs === 3,
-                    })}
+
                     onClick={(e) => this.toggleNavs(e, "plainTabs", 3)}
                     href="#pablo"
                     role="tab"
@@ -190,7 +172,7 @@ const TabsSection = () => {
             </div>
             <Card className="shadow">
               <CardBody>
-                <TabContent activeTab={"plainTabs" + this.state.plainTabs}>
+                <TabContent >
                   <TabPane tabId="plainTabs1">
                     <p className="description">
                       Raw denim you probably haven't heard of them jean shorts

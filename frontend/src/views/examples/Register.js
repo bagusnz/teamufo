@@ -43,7 +43,7 @@ const Register = () => {
     return (
       <>
         <DemoNavbar />
-        <main ref="main">
+
           <section className="section section-shaped section-lg">
             <div className="shape shape-style-1 bg-gradient-default">
               <span />
@@ -188,7 +188,7 @@ const Register = () => {
               </Row>
             </Container>
           </section>
-        </main>
+
         <SimpleFooter />
       </>
     );

@@ -18,7 +18,7 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row } from "reactstrap";
+import {Container, Row} from "reactstrap";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
@@ -34,12 +34,10 @@ import Navbars from "./IndexSections/Navbars.js";
 import Tabs from "./IndexSections/Tabs.js";
 import Progress from "./IndexSections/Progress.js";
 import Pagination from "./IndexSections/Pagination.js";
-import Pills from "./IndexSections/Pills.js";
 import Labels from "./IndexSections/Labels.js";
 import Alerts from "./IndexSections/Alerts.js";
 import Typography from "./IndexSections/Typography.js";
 import Modals from "./IndexSections/Modals.js";
-import Datepicker from "./IndexSections/Datepicker.js";
 import TooltipPopover from "./IndexSections/TooltipPopover.js";
 import Carousel from "./IndexSections/Carousel.js";
 import Icons from "./IndexSections/Icons.js";
@@ -51,7 +49,7 @@ const App = () => {
     return (
       <>
         <DemoNavbar />
-        <main ref="main">
+
           <Hero />
           <Buttons />
           <Inputs />
@@ -70,13 +68,11 @@ const App = () => {
                 <Pagination />
               </Row>
               <Row className="row-grid justify-content-between">
-                <Pills />
                 <Labels />
               </Row>
               <Alerts />
               <Typography />
               <Modals />
-              <Datepicker />
               <TooltipPopover />
             </Container>
           </section>
@@ -84,7 +80,6 @@ const App = () => {
           <Icons />
           <Login />
           <Download />
-        </main>
         <CardsFooter />
       </>
     );

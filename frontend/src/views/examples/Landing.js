@@ -48,7 +48,7 @@ const Landing = () => {
     return (
       <>
         <DemoNavbar />
-        <main ref="main">
+
           <div className="position-relative">
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-250">
@@ -784,9 +784,7 @@ const Landing = () => {
                         Your project is very important to us.
                       </p>
                       <FormGroup
-                        className={classnames("mt-5", {
-                          focused: this.state.nameFocused,
-                        })}
+
                       >
                         <InputGroup className="input-group-alternative">
                           <InputGroupAddon addonType="prepend">
@@ -797,19 +795,12 @@ const Landing = () => {
                           <Input
                             placeholder="Your name"
                             type="text"
-                            onFocus={(e) =>
-                              this.setState({ nameFocused: true })
-                            }
-                            onBlur={(e) =>
-                              this.setState({ nameFocused: false })
-                            }
+
                           />
                         </InputGroup>
                       </FormGroup>
                       <FormGroup
-                        className={classnames({
-                          focused: this.state.emailFocused,
-                        })}
+
                       >
                         <InputGroup className="input-group-alternative">
                           <InputGroupAddon addonType="prepend">
@@ -820,12 +811,7 @@ const Landing = () => {
                           <Input
                             placeholder="Email address"
                             type="email"
-                            onFocus={(e) =>
-                              this.setState({ emailFocused: true })
-                            }
-                            onBlur={(e) =>
-                              this.setState({ emailFocused: false })
-                            }
+
                           />
                         </InputGroup>
                       </FormGroup>
@@ -857,7 +843,7 @@ const Landing = () => {
             </Container>
           </section>
           <Download />
-        </main>
+
         <CardsFooter />
       </>
     );

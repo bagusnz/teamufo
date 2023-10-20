@@ -123,9 +123,6 @@ const Login = () => {
                       </div>
                       <Form role="form">
                         <FormGroup
-                          className={classnames("mb-3", {
-                            focused: this.state.emailFocused,
-                          })}
                         >
                           <InputGroup className="input-group-alternative">
                             <InputGroupAddon addonType="prepend">
@@ -136,19 +133,11 @@ const Login = () => {
                             <Input
                               placeholder="Email"
                               type="email"
-                              onFocus={(e) =>
-                                this.setState({ emailFocused: true })
-                              }
-                              onBlur={(e) =>
-                                this.setState({ emailFocused: false })
-                              }
                             />
                           </InputGroup>
                         </FormGroup>
                         <FormGroup
-                          className={classnames({
-                            focused: this.state.passwordFocused,
-                          })}
+
                         >
                           <InputGroup className="input-group-alternative">
                             <InputGroupAddon addonType="prepend">
@@ -160,12 +149,6 @@ const Login = () => {
                               placeholder="Password"
                               type="password"
                               autoComplete="off"
-                              onFocus={(e) =>
-                                this.setState({ passwordFocused: true })
-                              }
-                              onBlur={(e) =>
-                                this.setState({ passwordFocused: false })
-                              }
                             />
                           </InputGroup>
                         </FormGroup>
