@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Button, Card, CardBody, Col, Container, Row} from "reactstrap";
-import * as PropTypes from "prop-types";
 
 const ChallengeCardContainer = () => {
     const [foodwaste, setFoodwaste] = useState(false);
@@ -134,7 +133,5 @@ const ChallengeCardContainer = () => {
         </section>
 );
 }
-/*
-ChallengeCardContainer.propTypes = {onClick: PropTypes.func};*/
 
 export default ChallengeCardContainer;

@@ -27,14 +27,7 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 import ChallengeHeader from "./ChallengeHeader.js";
 import ChallengeCardContainer from "./ChallengeCardContainer";
 
-class Challenge extends React.Component {
-  state = {};
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
+const Challenge = () => {
     return (
       <>
         <DemoNavbar/>
@@ -67,7 +60,6 @@ class Challenge extends React.Component {
         <CardsFooter/>
       </>
     );
-  }
 }
 
 export default Challenge;

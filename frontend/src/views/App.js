@@ -35,10 +35,6 @@ import Tabs from "./IndexSections/Tabs.js";
 import Progress from "./IndexSections/Progress.js";
 import Pagination from "./IndexSections/Pagination.js";
 import Labels from "./IndexSections/Labels.js";
-import Alerts from "./IndexSections/Alerts.js";
-import Typography from "./IndexSections/Typography.js";
-import Modals from "./IndexSections/Modals.js";
-import TooltipPopover from "./IndexSections/TooltipPopover.js";
 import Carousel from "./IndexSections/Carousel.js";
 import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
@@ -70,10 +66,6 @@ const App = () => {
               <Row className="row-grid justify-content-between">
                 <Labels />
               </Row>
-              <Alerts />
-              <Typography />
-              <Modals />
-              <TooltipPopover />
             </Container>
           </section>
           <Carousel />
