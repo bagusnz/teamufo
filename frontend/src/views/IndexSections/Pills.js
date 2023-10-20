@@ -19,19 +19,10 @@ import React from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
 // reactstrap components
-import { NavItem, NavLink, Nav, Col } from "reactstrap";
+import {Col, Nav, NavItem, NavLink} from "reactstrap";
 
-class Index extends React.Component {
-  state = {
-    circledNavPills: 1,
-  };
-  toggleNavs = (e, state, index) => {
-    e.preventDefault();
-    this.setState({
-      [state]: index,
-    });
-  };
-  render() {
+const Index = () => {
+
     return (
       <>
         <Col lg="5">
@@ -88,7 +79,7 @@ class Index extends React.Component {
         </Col>
       </>
     );
-  }
+
 }
 
 export default Index;

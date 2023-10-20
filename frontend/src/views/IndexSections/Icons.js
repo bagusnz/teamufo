@@ -20,8 +20,8 @@ import React from "react";
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 
-class Icons extends React.Component {
-  render() {
+const Icons = () => {
+
     return (
       <>
         <section className="section section-lg section-nucleo-icons pb-250">
@@ -79,7 +79,7 @@ class Icons extends React.Component {
         </section>
       </>
     );
-  }
+
 }
 
 export default Icons;

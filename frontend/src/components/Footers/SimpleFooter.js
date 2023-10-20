@@ -29,8 +29,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-class SimpleFooter extends React.Component {
-  render() {
+const SimpleFooter = () => {
     return (
       <>
         <footer className=" footer">
@@ -158,7 +157,7 @@ class SimpleFooter extends React.Component {
         </footer>
       </>
     );
-  }
+
 }
 
 export default SimpleFooter;

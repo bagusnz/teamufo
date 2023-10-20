@@ -22,27 +22,21 @@ import classnames from "classnames";
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
-  FormGroup,
+  CardHeader,
+  Col,
   Form,
+  FormGroup,
   Input,
+  InputGroup,
   InputGroupAddon,
   InputGroupText,
-  InputGroup,
   Modal,
   Row,
-  Col,
 } from "reactstrap";
 
-class Modals extends React.Component {
-  state = {};
-  toggleModal = (state) => {
-    this.setState({
-      [state]: !this.state[state],
-    });
-  };
-  render() {
+const Modals = () => {
+
     return (
       <>
         <h2 className="mt-lg mb-5">
@@ -295,7 +289,6 @@ class Modals extends React.Component {
         </Row>
       </>
     );
-  }
 }
 
 export default Modals;

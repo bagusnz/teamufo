@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 // nodejs library that concatenates classes
 import classnames from "classnames";
 
@@ -24,22 +24,20 @@ import classnames from "classnames";
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
-  FormGroup,
+  CardHeader,
+  Col,
+  Container,
   Form,
+  FormGroup,
   Input,
+  InputGroup,
   InputGroupAddon,
   InputGroupText,
-  InputGroup,
-  Container,
   Row,
-  Col,
 } from "reactstrap";
 
-class Login extends React.Component {
-  state = {};
-  render() {
+const Login = () => {
     return (
       <>
         <section className="section section-lg section-shaped">
@@ -215,8 +213,7 @@ class Login extends React.Component {
           </div>
         </section>
       </>
-    );
-  }
+    )
 }
 
 export default Login;

@@ -18,19 +18,14 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Card, Container, Row, Col } from "reactstrap";
+import {Button, Card, Col, Container, Row} from "reactstrap";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
-class Profile extends React.Component {
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
+const Profile = () => {
+
     return (
       <>
         <DemoNavbar />
@@ -163,7 +158,6 @@ class Profile extends React.Component {
         <SimpleFooter />
       </>
     );
-  }
 }
 
 export default Profile;

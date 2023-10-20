@@ -20,8 +20,8 @@ import React from "react";
 // reactstrap components
 import { Pagination, PaginationItem, PaginationLink, Col } from "reactstrap";
 
-class PaginationSection extends React.Component {
-  render() {
+const PaginationSection = () => {
+
     return (
       <>
         <Col lg="5">
@@ -133,7 +133,7 @@ class PaginationSection extends React.Component {
         </Col>
       </>
     );
-  }
+
 }
 
 export default PaginationSection;

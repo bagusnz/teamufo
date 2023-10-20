@@ -18,10 +18,10 @@
 import React from "react";
 
 // reactstrap components
-import { Badge, Col } from "reactstrap";
+import {Badge, Col} from "reactstrap";
 
-class Labels extends React.Component {
-  render() {
+const Labels = () => {
+
     return (
       <>
         <Col lg="5">
@@ -44,7 +44,7 @@ class Labels extends React.Component {
         </Col>
       </>
     );
-  }
+
 }
 
 export default Labels;

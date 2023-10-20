@@ -35,8 +35,8 @@ import {
   Col,
 } from "reactstrap";
 
-class Navbars extends React.Component {
-  render() {
+const Navbars = () => {
+
     return (
       <>
         <section>
@@ -510,7 +510,6 @@ class Navbars extends React.Component {
         </section>
       </>
     );
-  }
 }
 
 export default Navbars;

@@ -43,14 +43,8 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 // index page sections
 import Download from "../IndexSections/Download.js";
 
-class Reward extends React.Component {
-  state = {};
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
+const Reward = () => {
+
     return (
       <>
         <DemoNavbar />
@@ -867,7 +861,6 @@ class Reward extends React.Component {
         <CardsFooter />
       </>
     );
-  }
 }
 
 export default Reward;

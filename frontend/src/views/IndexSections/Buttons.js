@@ -20,8 +20,8 @@ import React from "react";
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 
-class BasicElements extends React.Component {
-  render() {
+const BasicElements = () => {
+
     return (
       <>
         <section
@@ -212,7 +212,6 @@ class BasicElements extends React.Component {
         </section>
       </>
     );
-  }
 }
 
 export default BasicElements;

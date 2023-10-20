@@ -35,8 +35,8 @@ import {
   Col,
 } from "reactstrap";
 
-class Menus extends React.Component {
-  render() {
+const Menus = () => {
+
     return (
       <>
         <Row className="justify-content-center mt-md">
@@ -239,7 +239,6 @@ class Menus extends React.Component {
         </Row>
       </>
     );
-  }
 }
 
 export default Menus;

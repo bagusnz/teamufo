@@ -21,8 +21,8 @@ import React from "react";
 // reactstrap components
 import { Button, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
 
-class Download extends React.Component {
-  render() {
+const Download = () => {
+
     return (
       <>
         <section className="section section-lg">
@@ -161,7 +161,7 @@ class Download extends React.Component {
         </section>
       </>
     );
-  }
+
 }
 
 export default Download;

@@ -26,14 +26,14 @@ import {
   Card,
   CardBody,
   CardImg,
+  Col,
+  Container,
   FormGroup,
   Input,
+  InputGroup,
   InputGroupAddon,
   InputGroupText,
-  InputGroup,
-  Container,
   Row,
-  Col,
 } from "reactstrap";
 
 // core components
@@ -43,14 +43,8 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 // index page sections
 import Download from "../IndexSections/Download.js";
 
-class Landing extends React.Component {
-  state = {};
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
+const Landing = () => {
+
     return (
       <>
         <DemoNavbar />
@@ -867,7 +861,6 @@ class Landing extends React.Component {
         <CardsFooter />
       </>
     );
-  }
 }
 
 export default Landing;

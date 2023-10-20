@@ -20,8 +20,8 @@ import React from "react";
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 
-class Hero extends React.Component {
-  render() {
+const Hero = () => {
+
     return (
       <>
         <div className="position-relative">
@@ -117,7 +117,7 @@ class Hero extends React.Component {
         </div>
       </>
     );
-  }
+
 }
 
 export default Hero;

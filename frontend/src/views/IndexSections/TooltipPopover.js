@@ -28,8 +28,8 @@ import {
   PopoverHeader,
 } from "reactstrap";
 
-class TooltipPopover extends React.Component {
-  render() {
+const TooltipPopover = () => {
+
     return (
       <>
         <h3 className="h4 text-success font-weight-bold mt-md mb-4">
@@ -165,7 +165,7 @@ class TooltipPopover extends React.Component {
         </Row>
       </>
     );
-  }
+
 }
 
 export default TooltipPopover;

@@ -35,8 +35,8 @@ const items = [
   },
 ];
 
-class Carousel extends React.Component {
-  render() {
+const Carousel = () => {
+
     return (
       <>
         <section className="section section-shaped">
@@ -90,7 +90,6 @@ class Carousel extends React.Component {
         </section>
       </>
     );
-  }
 }
 
 export default Carousel;

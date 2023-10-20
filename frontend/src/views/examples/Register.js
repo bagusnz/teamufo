@@ -38,13 +38,8 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
-class Register extends React.Component {
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
+const Register = () => {
+
     return (
       <>
         <DemoNavbar />
@@ -197,7 +192,7 @@ class Register extends React.Component {
         <SimpleFooter />
       </>
     );
-  }
+
 }
 
 export default Register;

@@ -19,20 +19,10 @@ import React from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
 // reactstrap components
-import {
-  FormGroup,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
+import {Col, Container, FormGroup, Input, InputGroup, InputGroupAddon, InputGroupText, Row,} from "reactstrap";
 
-class Inputs extends React.Component {
-  state = {};
-  render() {
+const Inputs = () => {
+
     return (
       <>
         <section className="section pb-0 section-components">
@@ -207,7 +197,7 @@ class Inputs extends React.Component {
         </section>
       </>
     );
-  }
+
 }
 
 export default Inputs;

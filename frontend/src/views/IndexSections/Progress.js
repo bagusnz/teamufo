@@ -18,10 +18,9 @@
 import React from "react";
 
 // reactstrap components
-import { Progress, Col } from "reactstrap";
+import {Col, Progress} from "reactstrap";
 
-class ProgressSection extends React.Component {
-  render() {
+const ProgressSection = () => {
     return (
       <>
         <Col lg="5">
@@ -53,7 +52,7 @@ class ProgressSection extends React.Component {
         </Col>
       </>
     );
-  }
+
 }
 
 export default ProgressSection;

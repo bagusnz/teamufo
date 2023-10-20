@@ -32,18 +32,7 @@ import {
   Col,
 } from "reactstrap";
 
-class TabsSection extends React.Component {
-  state = {
-    iconTabs: 1,
-    plainTabs: 1,
-  };
-  toggleNavs = (e, state, index) => {
-    e.preventDefault();
-    this.setState({
-      [state]: index,
-    });
-  };
-  render() {
+const TabsSection = () => {
     return (
       <>
         <h3 className="h4 text-success font-weight-bold mb-4">Tabs</h3>
@@ -240,7 +229,7 @@ class TabsSection extends React.Component {
         </Row>
       </>
     );
-  }
+
 }
 
 export default TabsSection;

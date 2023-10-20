@@ -20,8 +20,8 @@ import React from "react";
 // reactstrap components
 import { UncontrolledAlert } from "reactstrap";
 
-class Alerts extends React.Component {
-  render() {
+const Alerts = () => {
+
     return (
       <>
         <h3 className="mt-lg mb-4">
@@ -61,7 +61,7 @@ class Alerts extends React.Component {
         </UncontrolledAlert>
       </>
     );
-  }
+
 }
 
 export default Alerts;

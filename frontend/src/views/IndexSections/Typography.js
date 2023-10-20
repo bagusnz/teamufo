@@ -20,8 +20,8 @@ import React from "react";
 // reactstrap components
 import { Row, Col } from "reactstrap";
 
-class Typography extends React.Component {
-  render() {
+const Typography = () => {
+
     return (
       <>
         <h2 className="mt-lg mb-5">
@@ -355,7 +355,7 @@ class Typography extends React.Component {
         </Row>
       </>
     );
-  }
+
 }
 
 export default Typography;

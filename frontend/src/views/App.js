@@ -46,13 +46,8 @@ import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
 
-class App extends React.Component {
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
+const App = () => {
+
     return (
       <>
         <DemoNavbar />
@@ -93,7 +88,7 @@ class App extends React.Component {
         <CardsFooter />
       </>
     );
-  }
+
 }
 
 export default App;

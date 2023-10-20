@@ -17,23 +17,10 @@
 */
 /*eslint-disable*/
 import React from "react";
-import { Link } from "react-router-dom";
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardImg,
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-  Row,
-  Col,
-  UncontrolledTooltip,
-} from "reactstrap";
+import {Button, Col, Container, Nav, NavItem, NavLink, Row, UncontrolledTooltip,} from "reactstrap";
 
-class CardsFooter extends React.Component {
-  render() {
+const CardsFooter = () => {
     return (
       <>
         <footer className="footer has-cards">
@@ -161,7 +148,6 @@ class CardsFooter extends React.Component {
         </footer>
       </>
     );
-  }
 }
 
 export default CardsFooter;

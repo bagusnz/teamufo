@@ -38,13 +38,7 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
-class Login extends React.Component {
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
-  render() {
+const Login = () => {
     return (
       <>
         <DemoNavbar />
@@ -187,7 +181,6 @@ class Login extends React.Component {
         <SimpleFooter />
       </>
     );
-  }
 }
 
 export default Login;

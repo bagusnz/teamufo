@@ -29,9 +29,8 @@ import {
   Col,
 } from "reactstrap";
 
-class Datepicker extends React.Component {
-  state = {};
-  handleReactDatetimeChange = (who, date) => {
+const Datepicker = () => {
+  const handleReactDatetimeChange = (who, date) => {
     if (
       this.state.startDate &&
       who === "endDate" &&
@@ -61,7 +60,7 @@ class Datepicker extends React.Component {
   // start-date className which means that this day will only have left border radius
   // end-date className which means that this day will only have right border radius
   // this way, the selected dates will look nice and will only be rounded at the ends
-  getClassNameReactDatetimeDays = (date) => {
+  const getClassNameReactDatetimeDays = (date) => {
     if (this.state.startDate && this.state.endDate) {
     }
     if (
@@ -84,7 +83,6 @@ class Datepicker extends React.Component {
     }
     return "";
   };
-  render() {
     return (
       <>
         <h3 className="h4 text-success font-weight-bold mt-md mb-4">
@@ -184,7 +182,6 @@ class Datepicker extends React.Component {
         </Row>
       </>
     );
-  }
 }
 
 export default Datepicker;
