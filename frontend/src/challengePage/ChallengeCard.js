@@ -5,7 +5,10 @@ const ChallengeCard = ({challenge}) => {
     return (
         <div>
             <h2>{challenge.title}</h2>
-            <button onClick={() => setTodo(!todo)}>{todo ? "to do" : "Done"}</button>
+            <h3>{challenge.point}</h3>
+            <button onClick={() => setTodo(!todo)}>
+                {todo ? "to do" : "Done"}
+            </button>
         </div>
     );
 }
