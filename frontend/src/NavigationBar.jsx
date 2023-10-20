@@ -13,6 +13,7 @@ const NavigationBar = () => {
           <Nav className="me-auto">
             <Nav.Link href="/test">Home</Nav.Link>
             <Nav.Link href="/challengeCards">Challenge</Nav.Link>
+            <Nav.Link href="/rewardsCards">Rewards</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
