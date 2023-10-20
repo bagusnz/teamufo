@@ -5,16 +5,16 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 const NavigationBar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-success ">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home" className="text-white">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/test">Home</Nav.Link>
-            <Nav.Link href="/challengeCards">Challenge</Nav.Link>
-            <Nav.Link href="/rewardsCards">Rewards</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <Nav.Link href="/test" className="text-white">Home</Nav.Link>
+            <Nav.Link href="/challengeCards" className="text-white">Challenge</Nav.Link>
+            <Nav.Link href="/rewardsCards" className="text-white">Rewards</Nav.Link>
+            <NavDropdown title={ <span className="text-white my-auto">Dropdown</span>} id="basic-nav-dropdown" >
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
