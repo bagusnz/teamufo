@@ -130,7 +130,7 @@ Argon Design System React
     │       └── DemoNavbar.js
     ├── index.js
     └── views
-        ├── Index.js
+        ├── App.js
         ├── IndexSections
         │   ├── Alerts.js
         │   ├── Buttons.js
