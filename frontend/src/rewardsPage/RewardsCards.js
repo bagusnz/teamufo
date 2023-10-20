@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { rewards } from "../mockDatei/rewards";
-import RewardCard from "./RewardCard";
+import RewardsCard from "./RewardsCard";
 import { users } from "../mockDatei/users";
 
 const RewardsCards = () => {
@@ -9,7 +9,7 @@ const RewardsCards = () => {
     <>
       <h3>My Points: {points}</h3>
       {rewards.map((reward) => (
-        <RewardCard key={reward.id} reward={reward} />
+        <RewardsCard key={reward.id} reward={reward} />
       ))}
     </>
   );

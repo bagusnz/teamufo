@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-const RewardCard = ({ reward }) => {
+const RewardsCard = ({ reward }) => {
   return (
     <>
       <Card style={{ width: "18rem" }}>
@@ -17,4 +17,4 @@ const RewardCard = ({ reward }) => {
   );
 };
 
-export default RewardCard;
+export default RewardsCard;
