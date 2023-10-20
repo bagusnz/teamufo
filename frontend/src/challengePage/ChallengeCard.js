@@ -8,8 +8,8 @@ const ChallengeCard = ({ challenge, points, setPoints }) => {
 
   const handleTodo = () => {
     todo
-      ? setPoints(points - challenge.point)
-      : setPoints(points + challenge.point);
+      ? setPoints(points - challenge.carboncredit)
+      : setPoints(points + challenge.carboncredit);
     setTodo(!todo);
   };
   return (
@@ -17,7 +17,8 @@ const ChallengeCard = ({ challenge, points, setPoints }) => {
       <Card.Img variant="top" src="holder.js/100px180" alt="Images" />
       <Card.Body>
         <Card.Title>{challenge.title}</Card.Title>
-        <Card.Text>{`${challenge.point} Point(s)`}</Card.Text>
+        <Card.Text>{challenge.description}</Card.Text>
+        <Card.Text>{`${challenge.carboncredit} Point(s)`}</Card.Text>
         <Button variant="outline-primary" onClick={handleTodo}>
           {todo ? "to do" : "Done"}
         </Button>
