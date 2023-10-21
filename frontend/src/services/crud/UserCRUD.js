@@ -1,4 +1,4 @@
-import { collection, doc, addDoc, getDocs, setDoc, deleteDoc, query, where } from "firebase/firestore";
+import { collection, doc, addDoc, getDocs, setDoc, deleteDoc, query, where, orderBy, limit } from "firebase/firestore";
 import { db } from "../firebase";
 import { isSingleAttributeUnique } from "./rules";
 
@@ -56,6 +56,27 @@ export const readUserByEmail = async (email) => {
     console.error("Error reading user by email:", error);
   }
 };
+
+export const readTopUsersWithCarbonCredits = async() => {
+  try {
+    const usersCollection = collection(db, 'users'); 
+
+    // Create a query to get the top 5 users with the most carbon credits
+    const querySnapshot = await getDocs(query(usersCollection, orderBy('carbon_credits', 'desc'), limit(5)));
+
+    const topUsers = [];
+    querySnapshot.forEach((doc) => {
+      // Access user data from the document
+      const user = doc.data();
+      topUsers.push(user);
+    });
+
+    return topUsers;
+  } catch (error) {
+    console.error('Error fetching top users:', error);
+    throw error; // Optionally rethrow the error for error handling
+  }
+}
 
 export const updateUser = async (userId, updatedData) => {
   try {
