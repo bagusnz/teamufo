@@ -46,11 +46,11 @@ const RewardsCard = ({ reward, points, setPoints }) => {
         </div>
         <div className="mt-5">
           <h3 className="heading">
-            Boucher - <br />
+            Voucher - <br />
             {reward.name}
           </h3>
           <div className="c-details">
-            <p className="mb-0">You can get a rebate with this boucher.</p>
+            <p className="mb-0">You can get a rebate with this Voucher.</p>
           </div>
           <div className="mt-5">
             <ProgressBar variant="success" now={50} />

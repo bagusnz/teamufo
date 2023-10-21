@@ -60,12 +60,12 @@ const RewardTemplate = () => {
                 </div>
                 <div className="mt-5">
                   <h3 className="heading">
-                    Boucher - <br />
+                    Voucher - <br />
                     Regional Product
                   </h3>
                   <div className="c-details">
                     <p className="mb-0">
-                      You can get a rebate with this boucher.
+                      You can get a rebate with this voucher.
                     </p>
                   </div>
                   <div className="mt-5">

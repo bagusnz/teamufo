@@ -30,9 +30,6 @@ const NavigationBar = () => {
             <Nav.Link href="/login" className="text-white">
               <span className="tab-animation">Login</span>
             </Nav.Link>
-            <Nav.Link href="/reward" className="text-white">
-              <span className="tab-animation">Reward Design</span>
-            </Nav.Link>
             <Nav.Link href="/profile" className="text-white">
               <span className="tab-animation">Profile</span>
             </Nav.Link>
