@@ -9,9 +9,9 @@ import Button from 'react-bootstrap/Button';
 // import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 // import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import bgimg from "../img/loginGreen.jpg";
-import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from 'services/firebase';
-  
+
 
 function LoginForm() {
     const [email, setEmail] = useState('');
@@ -39,6 +39,17 @@ function LoginForm() {
             setErrorMessage(error.message);
         }
     };
+
+    async function signUserOut() {
+        try {
+            await signOut(auth);
+            // User has been signed out
+            console.log('User signed out');
+        } catch (error) {
+            console.error('Error signing out:', error);
+            throw error; // Optionally rethrow the error for error handling
+        }
+    }
 
 
 
@@ -72,7 +83,7 @@ function LoginForm() {
                                 </Form.Group>
                                 <Form.Group className="last mb-4">
                                     <Form.Label htmlFor="password">Password</Form.Label>
-                                    <Form.Control type="password" id="password" placeholder='Your password' onChange={(e) => setPassword(e.target.value)}/>
+                                    <Form.Control type="password" id="password" placeholder='Your password' onChange={(e) => setPassword(e.target.value)} />
                                 </Form.Group>
                                 {/* <div className="d-flex mb-5 align-items-center">
                                     <InputGroup className="control control--checkbox mb-0">
@@ -85,8 +96,9 @@ function LoginForm() {
                                         <a href="/" className="forgot-pass">Forgot Password</a>
                                     </span>
                                 </div> */}
-                                <Button onClick={handleSignIn} className="btn btn-block btn-primary" >Log In</Button>                            
+                                <Button onClick={handleSignIn} className="btn btn-block btn-primary" >Log In</Button>
                                 <Button onClick={handleSignup} className="btn btn-block btn-primary">Register</Button>
+                                <Button onClick={signUserOut} className="btn btn-block btn-primary">Log Out</Button>
                                 {/* <span className="d-block text-left my-4 text-muted"> or login with </span>
                                 <div className="social-login">
                                     <span className="mr-2"><a href="/" className="mr-2">
