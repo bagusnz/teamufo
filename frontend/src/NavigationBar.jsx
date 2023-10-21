@@ -21,9 +21,16 @@ const NavigationBar = () => {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/challenges" className="text-white">
-              <span className="tab-animation">Challenges</span>
-            </Nav.Link>
+            <NavDropdown
+              title={<span className="text-white my-auto">Challenges</span>}
+              id="basic-nav-dropdown"
+            >
+              <NavDropdown.Item href="/challenges">
+                Daily Challenges
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/quiz">Quizzes</NavDropdown.Item>
+              <NavDropdown.Item href="/ranking">Ranking</NavDropdown.Item>
+            </NavDropdown>
             <Nav.Link href="/rewards" className="text-white">
               <span className="tab-animation">Rewards</span>
             </Nav.Link>

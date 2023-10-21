@@ -6,7 +6,8 @@ import bgimg from "../img/v990-129a.jpg";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
-import LeaderBoard from "./LeaderBoard";
+import LeaderBoard from "../challengePage/LeaderBoard";
+
 const trans = `rgba(210, 210, 210, 0.9)`;
 const cardTemplate = () => {
   return (

@@ -3,11 +3,13 @@ import "./LeaderBoard.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import ChallengeBanner from "./ChallengeBanner";
 
 const LeaderBoard = () => {
   return (
     <>
-      <Container>
+      <ChallengeBanner />
+      <Container className="mt-5">
         <Row>
           <Col></Col>
           <Col>

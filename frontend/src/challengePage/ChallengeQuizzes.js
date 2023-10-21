@@ -1,15 +1,13 @@
 import React from "react";
-
-import ChallengeCards from "./ChallengeCards";
 import ChallengeBanner from "./ChallengeBanner";
 
-const ChallengePage = () => {
+const ChallengeQuizzes = () => {
   return (
     <>
       <ChallengeBanner />
-      <ChallengeCards />
+      <div>comming soon!</div>
     </>
   );
 };
 
-export default ChallengePage;
+export default ChallengeQuizzes;
