@@ -27,6 +27,9 @@ export const readChallenges = async () => {
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
     });
+    
+    const challengesData = querySnapshot.docs.map((doc) => doc.data());
+    return challengesData
   } catch (error) {
     console.error("Error reading challenges:", error);
   }
@@ -40,6 +43,7 @@ export const readChallengeById = async (challengeId) => {
     if (challengeDoc.exists()) {
       console.log("Challenge ID:", challengeDoc.id);
       console.log("Challenge Data:", challengeDoc.data());
+      return challengeDoc.data()
     } else {
       console.log("No challenge found with this ID.");
     }

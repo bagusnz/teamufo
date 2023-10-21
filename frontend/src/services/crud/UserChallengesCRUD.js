@@ -27,6 +27,9 @@ export const readUserChallenges = async () => {
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
     });
+
+    const userChallengesData = querySnapshot.docs.map((doc) => doc.data());
+    return userChallengesData
   } catch (error) {
     console.error("Error reading user challenges:", error);
   }
@@ -41,6 +44,9 @@ export const readUserChallengesByUserId = async (userId) => {
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
     });
+
+    const userChallengesData = querySnapshot.docs.map((doc) => doc.data());
+    return userChallengesData
   } catch (error) {
     console.error("Error reading user challenges by user ID:", error);
   }
@@ -55,6 +61,9 @@ export const readUserChallengesByChallengeId = async (challengeId) => {
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
     });
+
+    const userChallengesData = querySnapshot.docs.map((doc) => doc.data());
+    return userChallengesData
   } catch (error) {
     console.error("Error reading user challenges by challenge ID:", error);
   }

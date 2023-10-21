@@ -27,6 +27,9 @@ export const readUserRewards = async () => {
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
     });
+
+    const userRewardsData = querySnapshot.docs.map((doc) => doc.data());
+    return userRewardsData
   } catch (error) {
     console.error("Error reading user rewards:", error);
   }
@@ -41,6 +44,9 @@ export const readUserRewardsByUserId = async (userId) => {
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
     });
+
+    const userRewardsData = querySnapshot.docs.map((doc) => doc.data());
+    return userRewardsData
   } catch (error) {
     console.error("Error reading user rewards by user ID:", error);
   }
@@ -55,6 +61,9 @@ export const readUserRewardsByRewardId = async (rewardId) => {
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
     });
+
+    const userRewardsData = querySnapshot.docs.map((doc) => doc.data());
+    return userRewardsData
   } catch (error) {
     console.error("Error reading user rewards by reward ID:", error);
   }

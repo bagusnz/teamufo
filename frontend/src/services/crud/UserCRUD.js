@@ -27,6 +27,9 @@ export const readUsers = async () => {
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
     });
+
+    const usersData = querySnapshot.docs.map((doc) => doc.data());
+    return usersData
   } catch (error) {
     console.error("Error reading users:", error);
   }
@@ -43,6 +46,7 @@ export const readUserByEmail = async (email) => {
     } else {
       querySnapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
+        return doc.data();
       });
     }
   } catch (error) {

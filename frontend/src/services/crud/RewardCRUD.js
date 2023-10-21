@@ -27,6 +27,9 @@ export const readRewards = async () => {
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
     });
+
+    const rewardsData = querySnapshot.docs.map((doc) => doc.data());
+    return rewardsData
   } catch (error) {
     console.error("Error reading rewards:", error);
   }
@@ -40,6 +43,7 @@ export const readRewardById = async (rewardId) => {
     if (rewardDoc.exists()) {
       console.log("Reward ID:", rewardDoc.id);
       console.log("Reward Data:", rewardDoc.data());
+      return rewardDoc.data();
     } else {
       console.log("No reward found with this ID.");
     }
