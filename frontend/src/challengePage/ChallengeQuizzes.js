@@ -1,10 +1,10 @@
 import React from "react";
-import ChallengeBanner from "./ChallengeBanner";
+import PageBanner from "../PageBanner";
 
 const ChallengeQuizzes = () => {
   return (
     <>
-      <ChallengeBanner />
+      <PageBanner title={"Solve the Quizzes"} />
       <div>comming soon!</div>
     </>
   );

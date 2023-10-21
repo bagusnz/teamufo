@@ -1,12 +1,12 @@
 import React from "react";
 
 import ChallengeCards from "./ChallengeCards";
-import ChallengeBanner from "./ChallengeBanner";
+import PageBanner from "../PageBanner";
 
 const ChallengePage = () => {
   return (
     <>
-      <ChallengeBanner />
+      <PageBanner title={"Do Your Challenges"} />
       <ChallengeCards />
     </>
   );
