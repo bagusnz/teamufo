@@ -1,0 +1,57 @@
+.bar-bottom {
+}
+
+.carousel-bottom {
+    margin-bottom: 50px;
+}
+
+.tab-animation {
+    display: block;
+    position: relative;
+    color: white;
+}
+
+.tab-animation:hover{
+    transform: scale(1);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
+.navbar-toggle {
+    color: white !important;
+    background-color: white !important;
+}
+
+.carousel-img {
+    height: 628px;
+    float: right;
+}
+
+.carousel-h {
+    height: 700px;
+}
+
+.carousel-center {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.carousel-item-first {
+    display: inline-block;
+    color: white;
+}
+
+.carousel-item-third {
+    float: right;
+    padding-top: 500px;
+    padding-right: 100px;
+}
+
+.button-right {
+    margin-right: 15px;
+}
