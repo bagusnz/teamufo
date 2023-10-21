@@ -1,8 +1,17 @@
 import { collection, doc, addDoc, getDocs, setDoc, deleteDoc, getDoc } from "firebase/firestore";
 import { db } from "../firebase";
+import { isSingleAttributeUnique } from "./rules";
 
 export const createReward = async (rewardData) => {
   try {
+    // Check if the id is unique
+    const idIsUnique = await isSingleAttributeUnique("rewards", "reward_id", rewardData.reward_id);
+
+    if (!idIsUnique) {
+      console.error("ID already exists. Reward reation failed.");
+      return;
+    }
+
     const rewardRef = collection(db, "rewards");
     await addDoc(rewardRef, rewardData);
   } catch (error) {

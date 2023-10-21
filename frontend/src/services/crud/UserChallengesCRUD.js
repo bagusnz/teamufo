@@ -1,8 +1,17 @@
 import { collection, doc, addDoc, getDocs, setDoc, deleteDoc, query, where } from "firebase/firestore";
 import { db } from "../firebase";
+import { isMultipleAttributesUnique } from "./rules";
 
 export const createUserChallenge = async (userChallengeData) => {
   try {
+    // Check if the userid and challengeid is unique
+    const isUnique = await isMultipleAttributesUnique("userChallenges", "user_id", userChallengeData.user_id, "challenge_id", userChallengeData.challenge_id);
+
+    if (!isUnique) {
+      console.error("Entity already exists. UserChallenge reation failed.");
+      return;
+    }
+
     const userChallengeRef = collection(db, "userChallenges");
     await addDoc(userChallengeRef, userChallengeData);
   } catch (error) {

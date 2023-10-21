@@ -1,8 +1,17 @@
 import { collection, doc, addDoc, getDocs, setDoc, deleteDoc, query, where } from "firebase/firestore";
 import { db } from "../firebase";
+import { isSingleAttributeUnique } from "./rules";
 
 export const createUser = async (userData) => {
   try {
+    // Check if the email is unique
+    const emailIsUnique = await isSingleAttributeUnique("users", "email", userData.email);
+
+    if (!emailIsUnique) {
+      console.error("Email already exists. User creation failed.");
+      return;
+    }
+
     const userRef = collection(db, "users");
     await addDoc(userRef, userData);
   } catch (error) {

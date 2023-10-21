@@ -3,6 +3,14 @@ import { db } from "../firebase";
 
 export const createUserReward = async (userRewardData) => {
   try {
+    // Check if the userid and challengeid is unique
+    const isUnique = await isMultipleAttributesUnique("userRewards", "user_id", userRewardData.user_id, "reward_id", userRewardData.reward_id);
+
+    if (!isUnique) {
+      console.error("Entity already exists. UserReward reation failed.");
+      return;
+    }
+    
     const userRewardRef = collection(db, "userRewards");
     await addDoc(userRewardRef, userRewardData);
   } catch (error) {

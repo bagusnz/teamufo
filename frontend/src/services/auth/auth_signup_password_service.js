@@ -1,5 +1,5 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 
 createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
