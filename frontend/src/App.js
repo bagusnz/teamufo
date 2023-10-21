@@ -27,7 +27,6 @@ const App = () => {
           <Route path="/calculator" element={<KwhToCO2Calculator />} />
           <Route path="/quiz" element={<ChallengeQuizzes />} />
           <Route path="/ranking" element={<LeaderBoard />} />
-            <Route path="/notify" element={<IntroNotification />} />
         </Routes>
       </BrowserRouter>
     </>

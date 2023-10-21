@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 
 .gr-1 { background: linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%); }
 .gr-2 { background: linear-gradient(170deg, #B4EC51 0%, #429321 100%); }
@@ -12,7 +13,12 @@
     top: 50%;
     transform: translateY(-50%);
 }
-
+#pageHeaderTitle {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+}
 .column {
     margin-top: 3rem;
     padding-left: 3rem;
@@ -42,7 +48,6 @@
     text-align: center;
     margin: 30px 0 0 0;
     color: black;
-    font-weight: bolder;
 }
 
 .divShadow {

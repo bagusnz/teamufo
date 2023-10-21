@@ -8,6 +8,7 @@ import sustainable from "./img/sustainable.jpg";
 import forest from "./img/greenforest.jpg";
 import green from "./img/green.jpg";
 import Values from "./values";
+import IntroNotification from "./introNotification";
 
 
 const Home = () => {
@@ -55,6 +56,8 @@ const Home = () => {
         </Carousel>
 
         <Values />
+
+        <IntroNotification />
 
         <div className="position-relative">
           <section className="section section-lg section-shaped pb-250">
