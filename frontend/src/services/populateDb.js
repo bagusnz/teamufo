@@ -1,9 +1,13 @@
 import Challenge from "../models/ChallengeModel";
 import Reward from "../models/RewardModel";
 import User from "../models/UserModel";
+import UserChallenge from "models/UserChallengeModel";
+import UserReward from "models/UserRewardModel";
 import { createChallenge } from "./crud/ChallengeCRUD";
 import { createReward } from "./crud/RewardCRUD";
 import { createUser } from "./crud/UserCRUD";
+import { createUserChallenge } from "./crud/UserChallengesCRUD";
+import { createUserReward } from "./crud/UserRewardsCRUD";
 
 
 export function populateDb() {
@@ -93,7 +97,7 @@ export function populateDb() {
     ];
 
     users.forEach((us) => { createUser(us.toObject()) })
-
+    
     const userChallenges = [
         new UserChallenge('user_challenge_id_1', 'user_id_1', 'challenge_id_1', '2023-10-15', 50),
         new UserChallenge('user_challenge_id_2', 'user_id_2', 'challenge_id_2', '2023-10-16', 60),
@@ -106,7 +110,9 @@ export function populateDb() {
         new UserChallenge('user_challenge_id_9', 'user_id_9', 'challenge_id_9', '2023-10-23', 50),
         new UserChallenge('user_challenge_id_10', 'user_id_10', 'challenge_id_10', '2023-10-24', 65),
     ];
-
+    
+    userChallenges.forEach((us) => { createUserChallenge(us.toObject()) })
+    
     const userRewards = [
         new UserReward('user_reward_id_1', 'user_id_1', 'reward_id_1', '2023-10-15'),
         new UserReward('user_reward_id_2', 'user_id_2', 'reward_id_2', '2023-10-16'),
@@ -118,6 +124,7 @@ export function populateDb() {
         new UserReward('user_reward_id_8', 'user_id_8', 'reward_id_8', '2023-10-22'),
         new UserReward('user_reward_id_9', 'user_id_9', 'reward_id_9', '2023-10-23'),
         new UserReward('user_reward_id_10', 'user_id_10', 'reward_id_10', '2023-10-24'),
-
     ];
+
+    userRewards.forEach((us) => { createUserReward(us.toObject()) })
 }

@@ -1,5 +1,6 @@
 import { collection, doc, addDoc, getDocs, setDoc, deleteDoc, query, where } from "firebase/firestore";
 import { db } from "../firebase";
+import { isMultipleAttributesUnique } from "./rules";
 
 export const createUserReward = async (userRewardData) => {
   try {
