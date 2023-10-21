@@ -20,24 +20,25 @@ const UserPointInfo = ({ users }) => {
       <Col>
         <div className="userInfo">
           <span>
-            <FontAwesomeIcon icon={faUser} /> Hello, {users[0].name}!
+            <FontAwesomeIcon icon={faUser} /> Hello, {users[0].name}! You have{" "}
+            <b>{users[0].points}</b> Points.
           </span>
-          <span className="pointSpan">{users[0].points} Points</span>
+          <span className="createSpan">
+            <Button
+              variant="primary"
+              className="button"
+              onClick={handleCreateClick}
+            >
+              Create Challenge
+            </Button>
+            {showCreateDialog && (
+              <CreateChallenge
+                show={showCreateDialog}
+                onHide={() => setShowCreateDialog(false)}
+              />
+            )}
+          </span>
         </div>
-
-        <Button
-          variant="primary"
-          className="button"
-          onClick={handleCreateClick}
-        >
-          Create Challenge
-        </Button>
-        {showCreateDialog && (
-          <CreateChallenge
-            show={showCreateDialog}
-            onHide={() => setShowCreateDialog(false)}
-          />
-        )}
       </Col>
     </Row>
   );

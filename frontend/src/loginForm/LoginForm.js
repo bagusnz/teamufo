@@ -5,10 +5,10 @@ import Col from 'react-bootstrap/Col';
 // import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import bgimg from "../img/doForCo2.jpg";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 // import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import bgimg from "../img/loginGreen.jpg";
 import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from 'services/firebase';
   

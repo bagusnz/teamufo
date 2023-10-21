@@ -5,6 +5,7 @@
     border: 1px solid rgba(210, 210, 210, 0.9);
 }
 
-.pointSpan {
+.createSpan {
     float: right;
+    margin: auto;
 }

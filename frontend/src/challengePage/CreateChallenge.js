@@ -9,11 +9,17 @@ const CreateChallenge = ({ show, onHide }) => {
     carbon_footprint_reduction: 0,
     category: "",
     created_by_user_id: null,
+    image: null,
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setChallenge({ ...challenge, [name]: value });
+  };
+
+  const handleImageChange = (e) => {
+    const imageFile = e.target.files[0];
+    setChallenge({ ...challenge, image: imageFile });
   };
 
   const handleSubmit = () => {
@@ -41,6 +47,20 @@ const CreateChallenge = ({ show, onHide }) => {
               name="title"
               value={challenge.title}
               onChange={handleInputChange}
+            />
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="image" className="form-label">
+              Image (Optional)
+            </label>
+            <input
+              type="file"
+              className="form-control"
+              id="image"
+              name="image"
+              accept="image/*" // Limit to image files
+              onChange={handleImageChange}
             />
           </div>
 
