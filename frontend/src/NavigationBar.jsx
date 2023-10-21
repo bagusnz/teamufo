@@ -11,7 +11,7 @@ const NavigationBar = () => {
   return (
     <Navbar expand="lg" className="bg-success bar-bottom">
       <Container>
-        <Navbar.Brand href="/" className="text-white"><FontAwesomeIcon icon={faSeedling} /> Your co2 <FontAwesomeIcon icon={faSeedling} /></Navbar.Brand>
+        <Navbar.Brand href="/" className="text-white custom-font"><FontAwesomeIcon icon={faSeedling} /> Your CO<sub>2</sub> <FontAwesomeIcon icon={faSeedling} /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggle"/>
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="me-auto">

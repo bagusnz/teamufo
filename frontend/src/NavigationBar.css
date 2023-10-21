@@ -55,3 +55,7 @@
 .button-right {
     margin-right: 15px;
 }
+
+.custom-font {
+    font-family: 'Playfair Display', serif;
+}
