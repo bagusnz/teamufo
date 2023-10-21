@@ -11,8 +11,8 @@ import LoginForm from "./loginForm/LoginForm";
 const App = () => {
   return (
     <>
-      <NavigationBar />
       <BrowserRouter>
+        <NavigationBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/challenges" element={<ChallengePage />} />

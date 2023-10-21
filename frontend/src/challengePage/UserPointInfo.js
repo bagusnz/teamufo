@@ -6,8 +6,9 @@ import "./UserPointInfo.css";
 import Button from "react-bootstrap/Button";
 import CreateChallenge from "./CreateChallenge";
 import { useState } from "react";
+import User from "models/UserModel";
 
-const UserPointInfo = ({ users }) => {
+const UserPointInfo = ({ user, points }) => {
   const [showCreateDialog, setShowCreateDialog] = useState(false);
 
   const handleCreateClick = () => {
@@ -20,8 +21,8 @@ const UserPointInfo = ({ users }) => {
       <Col>
         <div className="userInfo">
           <span>
-            <FontAwesomeIcon icon={faUser} /> Hello, {users[0].name}! You have{" "}
-            <b>{users[0].points}</b> Points.
+            <FontAwesomeIcon icon={faUser} /> Hello, {user.email}! You have{" "}
+            <b>{points}</b> Points.
           </span>
           <span className="createSpan">
             <Button

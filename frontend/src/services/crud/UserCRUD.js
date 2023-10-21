@@ -43,12 +43,15 @@ export const readUserByEmail = async (email) => {
 
     if (querySnapshot.size === 0) {
       console.log("No user found with this email.");
+      return null;
     } else {
       querySnapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
-        return doc.data();
       });
     }
+
+    const userData = querySnapshot.docs[0].data();
+    return userData;
   } catch (error) {
     console.error("Error reading user by email:", error);
   }
