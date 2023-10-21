@@ -13,7 +13,12 @@ const RewardsCards = () => {
         <h3>My Points: {points}</h3>
         <Row>
           {rewards.map((reward) => (
-            <RewardsCard key={reward.id} reward={reward} />
+            <RewardsCard
+              key={reward.id}
+              reward={reward}
+              points={points}
+              setPoints={setPoints}
+            />
           ))}
         </Row>
       </Container>

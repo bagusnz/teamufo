@@ -4,7 +4,23 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
-const RewardsCard = ({ reward }) => {
+const RewardsCard = ({ reward, points, setPoints }) => {
+  const handleCost = () => {
+    if (points >= reward.cost) {
+      handleBuy();
+    } else {
+      alert(
+        "your points are insufficient to place an order for the desired product.",
+      );
+    }
+  };
+
+  const isRewardAvailable = reward.quantity > 0;
+
+  const handleBuy = () => {
+    setPoints((points) => points - reward.cost);
+  };
+
   return (
     <Col md={4}>
       <Card className="p-3 mb-4">
@@ -19,7 +35,13 @@ const RewardsCard = ({ reward }) => {
             </div>
           </div>
           <div className="badge">
-            <Button variant="danger">- {reward.cost} P</Button>
+            <Button
+              variant="danger"
+              onClick={handleCost}
+              disabled={!isRewardAvailable}
+            >
+              - {reward.cost} P
+            </Button>
           </div>
         </div>
         <div className="mt-5">
