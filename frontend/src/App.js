@@ -2,7 +2,6 @@ import React from "react";
 import NavigationBar from "./NavigationBar.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Profile from "./profile/Profile";
 import ChallengePage from "./challengePage/ChallengePage";
@@ -23,7 +22,6 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
     </>
   );
 };
