@@ -4,14 +4,15 @@ import { users } from "../mockDatei/users";
 import { challenges } from "../mockDatei/challenges";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import UserPointInfo from "./UserPointInfo";
 
 const ChallengeCards = () => {
   const [points, setPoints] = useState(users[0].points);
 
   return (
     <>
-      <h3>My Points: {points}</h3>
-      <Container>
+        <Container>
+        <UserPointInfo users={users} />
         <Row>
           {challenges.map((challenge) => (
             <ChallengeCard

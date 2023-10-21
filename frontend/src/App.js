@@ -1,5 +1,4 @@
 import React from "react";
-import ChallengeCards from "./challengePage/ChallengeCards";
 import NavigationBar from "./NavigationBar.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
