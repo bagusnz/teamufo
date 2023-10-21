@@ -20,7 +20,7 @@ const PageBanner = ({ title }) => {
           justifyContent: "center",
         }}
       >
-        <p
+        <span
           style={{
             border: "10px solid white",
             padding: 30,
@@ -28,7 +28,7 @@ const PageBanner = ({ title }) => {
           }}
         >
           <h1 className="top-div">{title}</h1>
-        </p>
+        </span>
       </div>
     </div>
   );

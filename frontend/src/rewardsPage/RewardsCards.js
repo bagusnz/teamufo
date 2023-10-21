@@ -27,7 +27,7 @@ const RewardsCards = () => {
         <Row>
           {rewards.map((reward) => (
             <RewardsCard
-              key={reward.id}
+              key={reward.reward_id}
               reward={reward}
               user={user}
               setPoints={setPoints}
