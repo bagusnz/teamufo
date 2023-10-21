@@ -1,21 +1,21 @@
 import { Container } from "react-bootstrap";
 import React from "react";
+import Team from './img/Team-spirit-pana.png'
 
 const TeamMember = () => {
   return (
     <>
       <Container>
+        <h1 className="h1 text-center" id="pageHeaderTitle">
+          Our Teams
+        </h1>
         <section className="light">
           <div className="container py-4">
-            <h1 className="h1 text-center" id="pageHeaderTitle">
-              Our Teams
-            </h1>
-
             <article className="postcard light blue">
               <a className="postcard__img_link" href="#">
                 <img
                   className="postcard__img"
-                  src="https://images.unsplash.com/photo-1634193295627-1cdddf751ebf?fit=clamp&w=400&h=400&q=80"
+                  src={Team}
                   alt="Image Title"
                 />
               </a>

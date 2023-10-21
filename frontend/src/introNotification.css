@@ -52,7 +52,7 @@ a, a:hover {
 }
 
 .postcard.light {
-    background-color: #e1e5ea;
+    background-color: white;
 }
 
 .t-dark {
@@ -93,7 +93,7 @@ a, a:hover {
     height: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    background-color: #424242;
+    background-color: #81dd81;
     transition: width 0.2s ease;
 }
 
@@ -142,7 +142,7 @@ a, a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    background-image: linear-gradient(-70deg, #e5f8e5, transparent 50%);
     opacity: 1;
     border-radius: 10px;
 }
@@ -219,7 +219,7 @@ a, a:hover {
         display: block;
         top: -20%;
         height: 130%;
-        width: 55px;
+        width: 0px;
     }
 
     .postcard.dark .postcard__text:before {

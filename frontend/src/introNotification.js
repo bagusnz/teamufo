@@ -9,12 +9,11 @@ const IntroNotification = () => {
   return (
     <>
       <Container>
+        <h1 className="h1 text-center" id="pageHeaderTitle">
+          Our features
+        </h1>
         <section className="light">
           <div className="container py-4">
-            <h1 className="h1 text-center" id="pageHeaderTitle">
-              Our features
-            </h1>
-
             <article className="postcard light blue">
               <a className="postcard__img_link" href="#">
                 <img className="postcard__img" src={Todo} alt="Image Title" />
