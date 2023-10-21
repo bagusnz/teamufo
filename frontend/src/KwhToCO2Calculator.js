@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
+import PageBanner from "./PageBanner";
 
 const KwhToCO2Calculator = () => {
   const [kwhInput, setKwhInput] = useState("");
@@ -38,44 +39,54 @@ const KwhToCO2Calculator = () => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col md={6}>
-          <h2>KWh to CO2 Credit Calculator</h2>
-          <Form>
-            <Form.Group>
-              <Form.Label>Enter Energy Consumption (kWh)</Form.Label>
-              <Form.Control
-                type="number"
-                value={kwhInput}
-                onChange={handleKwhInputChange}
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>House Size (m^2)</Form.Label>
-              <Form.Control
-                type="number"
-                value={houseSize}
-                onChange={handleHouseSizeChange}
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Number of People</Form.Label>
-              <Form.Control
-                type="number"
-                value={peopleCount}
-                onChange={handlePeopleCountChange}
-              />
-            </Form.Group>
-          </Form>
-          <div>
-            <p>CO2 Emissions: {co2Emissions} kg</p>
-            <p>CO2 Credits: {co2Credits} kg</p>
-            <p>CO2 Credits Per Person: {co2CreditsPerPerson} kg</p>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <PageBanner title={"CO2 Calculator"} />
+      <Container>
+        <Row>
+          <Col md={6} className="mt-5">
+            <Form>
+              <Form.Group>
+                <Form.Label>Enter Energy Consumption (kWh)</Form.Label>
+                <Form.Control
+                  type="number"
+                  value={kwhInput}
+                  onChange={handleKwhInputChange}
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>
+                  House Size (m<sup>2</sup>)
+                </Form.Label>
+                <Form.Control
+                  type="number"
+                  value={houseSize}
+                  onChange={handleHouseSizeChange}
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Number of People</Form.Label>
+                <Form.Control
+                  type="number"
+                  value={peopleCount}
+                  onChange={handlePeopleCountChange}
+                />
+              </Form.Group>
+            </Form>
+            <div>
+              <p>
+                CO<sub>2</sub> Emissions: {co2Emissions} kg
+              </p>
+              <p>
+                CO<sub>2</sub> Credits: {co2Credits} kg
+              </p>
+              <p>
+                CO<sub>2</sub> Credits Per Person: {co2CreditsPerPerson} kg
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 

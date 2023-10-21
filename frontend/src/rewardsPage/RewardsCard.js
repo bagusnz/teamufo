@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
-const RewardsCard = ({ reward, setPoints, user }) => {
+const RewardsCard = ({ reward, user, setPoints }) => {
   const handleCost = () => {
     if (user && user.carbon_credits >= reward.carbon_credit_cost) {
       handleBuy();
@@ -18,11 +18,11 @@ const RewardsCard = ({ reward, setPoints, user }) => {
   const isRewardAvailable = reward.available_quantity > 0;
 
   const handleBuy = () => {
-    if(user){
+    if (user) {
       // console.log(user.carbon_credits)
       user.carbon_credits = user.carbon_credits - reward.carbon_credit_cost;
-      // console.log(user.carbon_credits)
       setPoints(user.carbon_credits);
+      // console.log(user.carbon_credits)
     }
   };
 
@@ -50,9 +50,7 @@ const RewardsCard = ({ reward, setPoints, user }) => {
           </div>
         </div>
         <div className="mt-5">
-          <h3 className="heading">
-            {reward.name}
-          </h3>
+          <h3 className="heading">{reward.name}</h3>
           <div className="c-details">
             <p className="mb-0">{reward.description}</p>
           </div>
@@ -61,7 +59,9 @@ const RewardsCard = ({ reward, setPoints, user }) => {
             <div className="mt-3">
               <span className="text1">
                 {reward.available_quantity} Applied{" "}
-                <span className="text2">of {reward.available_quantity*2} capacity</span>
+                <span className="text2">
+                  of {reward.available_quantity * 2} capacity
+                </span>
               </span>
             </div>
           </div>

@@ -1,10 +1,10 @@
-import RewardsBanner from "./RewardsBanner";
 import RewardsCards from "./RewardsCards";
+import PageBanner from "../PageBanner";
 
 const RewardsPage = () => {
   return (
     <>
-      <RewardsBanner />
+      <PageBanner title="Get Your Rewards" />
       <RewardsCards />
     </>
   );

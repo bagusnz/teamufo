@@ -1,10 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import profilePicture from "../img/smile.jpg";
+import PageBanner from "../PageBanner";
 
 function Profile() {
   return (
     <section className="py-6 py-sm-12">
+      <PageBanner title="Your Profile" />
       <Container>
         <Row className="mt-5 justify-content-center">
           <Col xs={12} className="text-center mb-5">

@@ -14,7 +14,7 @@ const Values = () => {
                 <div >
                     <Row >
                     <Col></Col>
-                    <Col><h1 className="valueText">Our values</h1></Col>
+                    <Col><h1 className="valueText" id="pageHeaderTitle">Our values</h1></Col>
 
                     <Col></Col>
                 </Row>

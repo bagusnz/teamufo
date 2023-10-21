@@ -1,7 +1,7 @@
-import bgimg from "../img/v990-129a.jpg";
 import React from "react";
+import bgimg from "./img/v990-129a.jpg";
 
-const ChallengeBanner = () => {
+const PageBanner = ({ title }) => {
   const trans = `rgba(210, 210, 210, 0.9)`;
 
   return (
@@ -12,7 +12,7 @@ const ChallengeBanner = () => {
           backgroundImage: `url(${bgimg})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: 400,
+          height: 350,
           color: "black",
           display: "flex",
           flexDirection: "column",
@@ -20,18 +20,18 @@ const ChallengeBanner = () => {
           justifyContent: "center",
         }}
       >
-        <p
+        <span
           style={{
             border: "10px solid white",
             padding: 30,
             backgroundColor: trans,
           }}
         >
-          <h1 className="top-div">Do Your Challenges</h1>
-        </p>
+          <h1 className="top-div">{title}</h1>
+        </span>
       </div>
     </div>
   );
 };
 
-export default ChallengeBanner;
+export default PageBanner;

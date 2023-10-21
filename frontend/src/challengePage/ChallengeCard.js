@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Badge from "react-bootstrap/Badge";
+import Todo from '../img/To-do-list-cuate.png'
 
 const ChallengeCard = ({ challenge, points, setPoints }) => {
   //TODO: get userid from Cache? or from backend?
@@ -19,7 +20,7 @@ const ChallengeCard = ({ challenge, points, setPoints }) => {
     <Col sm={4}>
       <Card className="col-sm mb-4">
         <Card.Img
-          src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
+          src={Todo}
           alt="Card image"
           variant="top"
         />
