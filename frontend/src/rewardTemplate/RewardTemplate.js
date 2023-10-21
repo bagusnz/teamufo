@@ -6,7 +6,6 @@ import React from "react";
 import bgimg from '../img/v990-129a.jpg';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import Badge from "react-bootstrap/Badge";
 import ProgressBar from "react-bootstrap/ProgressBar";
 const trans = `rgba(210, 210, 210, 0.9)`;
 

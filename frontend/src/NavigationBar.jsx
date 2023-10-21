@@ -11,16 +11,16 @@ const NavigationBar = () => {
   return (
     <Navbar expand="lg" className="bg-success bar-bottom">
       <Container>
-        <Navbar.Brand href="#home" className="text-white"><FontAwesomeIcon icon={faSeedling} /> Your co2 <FontAwesomeIcon icon={faSeedling} /></Navbar.Brand>
+        <Navbar.Brand href="/" className="text-white"><FontAwesomeIcon icon={faSeedling} /> Your co2 <FontAwesomeIcon icon={faSeedling} /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggle"/>
         <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="me-auto">
             <Nav.Link href="/home" className="text-white"><span className="tab-animation">Home</span></Nav.Link>
-            <Nav.Link href="/challengeCards" className="text-white"><span>Challenge</span></Nav.Link>
-            <Nav.Link href="/rewardsCards" className="text-white"><span>Rewards</span></Nav.Link>
-            <Nav.Link href="/card" className="text-white"><span>Challenge Design</span></Nav.Link>
-            <Nav.Link href="/reward" className="text-white"><span>Reward Design</span></Nav.Link>
-            <Nav.Link href="/profile" className="text-white"><span>Profile</span></Nav.Link>
+            <Nav.Link href="/challengeCards" className="text-white"><span className="tab-animation">Challenge</span></Nav.Link>
+            <Nav.Link href="/rewardsCards" className="text-white"><span className="tab-animation">Rewards</span></Nav.Link>
+            <Nav.Link href="/card" className="text-white"><span className="tab-animation">Challenge Design</span></Nav.Link>
+            <Nav.Link href="/reward" className="text-white"><span className="tab-animation">Reward Design</span></Nav.Link>
+            <Nav.Link href="/profile" className="text-white"><span className="tab-animation">Profile</span></Nav.Link>
             <NavDropdown title={ <span className="text-white my-auto">Dropdown</span>} id="basic-nav-dropdown" >
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
