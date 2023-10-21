@@ -11,6 +11,9 @@
     color: white;
 }
 
+.loginSpan {
+    float:right;
+}
 .tab-animation:hover{
     transform: scale(1);
     text-decoration: underline;

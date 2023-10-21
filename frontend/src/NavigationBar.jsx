@@ -22,14 +22,23 @@ const NavigationBar = () => {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/challenges" className="text-white">
-              <span className="tab-animation">Challenges</span>
-            </Nav.Link>
-            <Nav.Link as={Link} to="/rewards" className="text-white">
+            <NavDropdown
+              title={<span className="text-white my-auto">Challenges</span>}
+              id="basic-nav-dropdown"
+            >
+              <NavDropdown.Item href="/challenges">
+                Daily Challenges
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/quiz">Quizzes</NavDropdown.Item>
+              <NavDropdown.Item href="/ranking">Ranking</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="/rewards" className="text-white">
               <span className="tab-animation">Rewards</span>
             </Nav.Link>
-            <Nav.Link as={Link} to="/login" className="text-white">
-              <span className="tab-animation">Login</span>
+            <Nav.Link href="/calculator" className="text-white">
+              <span className="tab-animation">
+                kWh to CO<sub>2</sub>
+              </span>
             </Nav.Link>
             <Nav.Link as={Link} to="/profile" className="text-white">
               <span className="tab-animation">Profile</span>
@@ -44,6 +53,12 @@ const NavigationBar = () => {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="/notify" className="text-white loginSpan">
+              <span className="tab-animation">Notify</span>
+            </Nav.Link>
+            <Nav.Link href="/login" className="text-white loginSpan">
+              <span className="tab-animation">Login</span>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
