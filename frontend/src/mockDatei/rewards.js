@@ -16,7 +16,14 @@ const reward3 = {
   id: 3,
   name: "Reward 3",
   cost: 1000,
+  quantity: 3,
+};
+
+const reward4 = {
+  id: 4,
+  name: "Reward 4",
+  cost: 2000,
   quantity: 1,
 };
 
-export const rewards = [reward1, reward2, reward3];
+export const rewards = [reward1, reward2, reward3, reward4];

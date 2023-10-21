@@ -21,10 +21,10 @@ const NavigationBar = () => {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/challengeCards" className="text-white">
+            <Nav.Link href="/challenges" className="text-white">
               <span className="tab-animation">Challenges</span>
             </Nav.Link>
-            <Nav.Link href="/rewardsCards" className="text-white">
+            <Nav.Link href="/rewards" className="text-white">
               <span className="tab-animation">Rewards</span>
             </Nav.Link>
             <Nav.Link href="/card" className="text-white">
