@@ -43,6 +43,9 @@ const NavigationBar = () => {
             <Nav.Link as={Link} to="/profile" className="text-white">
               <span className="tab-animation">Profile</span>
             </Nav.Link>
+            <Nav.Link as={Link} to="/team" className="text-white">
+              <span className="tab-animation">Team</span>
+            </Nav.Link>
             <NavDropdown
               title={<span className="text-white my-auto">Dropdown</span>}
               id="basic-nav-dropdown"

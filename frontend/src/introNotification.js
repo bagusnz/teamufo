@@ -20,7 +20,7 @@ const IntroNotification = () => {
                                 <img className="postcard__img" src={Todo} alt="Image Title" />
                             </a>
                             <div className="postcard__text">
-                                <h1 className="postcard__title blue"><a href="#">Doing Challenges</a></h1>
+                                <h1 className="postcard__title blue">Doing Challenges</h1>
                                 <div className="postcard__subtitle small">
                                     <time dateTime="2020-05-25 12:00:00">
                                         <i className="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
@@ -41,7 +41,7 @@ const IntroNotification = () => {
                                 <img className="postcard__img" src={community} alt="Image Title" />
                             </a>
                             <div className="postcard__text">
-                                <h1 className="postcard__title blue"><a href="#">Doing Together</a></h1>
+                                <h1 className="postcard__title blue">Doing Together</h1>
                                 <div className="postcard__subtitle small">
                                     <time dateTime="2020-05-25 12:00:00">
                                         <i className="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020

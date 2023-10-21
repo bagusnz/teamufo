@@ -11,6 +11,7 @@ import KwhToCO2Calculator from "./KwhToCO2Calculator";
 import ChallengeQuizzes from "./challengePage/ChallengeQuizzes";
 import LeaderBoard from "./challengePage/LeaderBoard";
 import IntroNotification from "./introNotification";
+import TeamMember from "./TeamMember";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/calculator" element={<KwhToCO2Calculator />} />
           <Route path="/quiz" element={<ChallengeQuizzes />} />
+          <Route path="/team" element={<TeamMember />} />
           <Route path="/ranking" element={<LeaderBoard />} />
         </Routes>
       </BrowserRouter>
