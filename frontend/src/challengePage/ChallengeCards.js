@@ -16,15 +16,15 @@ const ChallengeCards = () => {
       const challengesData = await readChallenges();
       setChallenges(challengesData);
     }
-    
-    setPoints(user ? user.carbon_credits : 0)
+
+    setPoints(user ? user.carbon_credits : 0);
     fetchChallenges();
   }, []);
 
   return (
     <>
-        <Container>
-        {user ? <UserPointInfo user={user} points={points}/> : <span></span>}
+      <Container>
+        {user && <UserPointInfo user={user} points={points} />}
         <Row>
           {challenges.map((challenge) => (
             <ChallengeCard
