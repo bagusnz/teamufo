@@ -10,8 +10,8 @@ const ChallengeCard = ({ challenge, points, setPoints }) => {
 
   const handleTodo = () => {
     todo
-      ? setPoints(points + challenge.carboncredit)
-      : setPoints(points - challenge.carboncredit);
+      ? setPoints(points + challenge.carbon_credits)
+      : setPoints(points - challenge.carbon_credits);
     setTodo(!todo);
   };
 
@@ -39,7 +39,7 @@ const ChallengeCard = ({ challenge, points, setPoints }) => {
           <Card.Text>{challenge.description}</Card.Text>
           {todo ? (
             <Button className="btn-success" onClick={handleTodo}>
-              + {challenge.carboncredit} P
+              + {challenge.carbon_credits} P
             </Button>
           ) : (
             <Button className="btn-success" onClick={handleTodo} disabled>

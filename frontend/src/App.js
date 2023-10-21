@@ -15,8 +15,8 @@ import IntroNotification from "./introNotification";
 const App = () => {
   return (
     <>
-      <NavigationBar />
       <BrowserRouter>
+        <NavigationBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/challenges" element={<ChallengePage />} />

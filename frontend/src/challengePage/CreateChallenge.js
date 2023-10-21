@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import { createChallenge } from "services/crud/ChallengeCRUD";
 
 const CreateChallenge = ({ show, onHide }) => {
   const [challenge, setChallenge] = useState({
+    challenge_id: "3432432",
     title: "",
     description: "",
-    carbon_footprint_reduction: 0,
+    carbon_credits: 0,
     category: "",
-    created_by_user_id: null,
+    created_by_user_email: null,
     image: null,
   });
 
@@ -22,10 +24,12 @@ const CreateChallenge = ({ show, onHide }) => {
     setChallenge({ ...challenge, image: imageFile });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // Handle the submission of the challenge data (e.g., send it to a server).
     // You can use API calls or state management libraries for this.
     // After submission, you can close the dialog.
+    await createChallenge(challenge);
+    alert('Challenge created successfully!');
     onHide();
   };
 
@@ -78,15 +82,15 @@ const CreateChallenge = ({ show, onHide }) => {
           </div>
 
           <div className="mb-3">
-            <label htmlFor="carbon_footprint_reduction" className="form-label">
+            <label htmlFor="carbon_credits" className="form-label">
               Carbon Footprint Reduction (CO2 equivalent units)
             </label>
             <input
               type="number"
               className="form-control"
-              id="carbon_footprint_reduction"
-              name="carbon_footprint_reduction"
-              value={challenge.carbon_footprint_reduction}
+              id="carbon_credits"
+              name="carbon_credits"
+              value={challenge.carbon_credits}
               onChange={handleInputChange}
             />
           </div>

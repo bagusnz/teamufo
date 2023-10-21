@@ -4,9 +4,9 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
-const RewardsCard = ({ reward, points, setPoints }) => {
+const RewardsCard = ({ reward, setPoints, user }) => {
   const handleCost = () => {
-    if (points >= reward.cost) {
+    if (user && user.carbon_credits >= reward.carbon_credit_cost) {
       handleBuy();
     } else {
       alert(
@@ -15,10 +15,15 @@ const RewardsCard = ({ reward, points, setPoints }) => {
     }
   };
 
-  const isRewardAvailable = reward.quantity > 0;
+  const isRewardAvailable = reward.available_quantity > 0;
 
   const handleBuy = () => {
-    setPoints((points) => points - reward.cost);
+    if(user){
+      // console.log(user.carbon_credits)
+      user.carbon_credits = user.carbon_credits - reward.carbon_credit_cost;
+      // console.log(user.carbon_credits)
+      setPoints(user.carbon_credits);
+    }
   };
 
   return (
@@ -38,26 +43,25 @@ const RewardsCard = ({ reward, points, setPoints }) => {
             <Button
               variant="danger"
               onClick={handleCost}
-              disabled={!isRewardAvailable}
+              disabled={!isRewardAvailable && !user}
             >
-              - {reward.cost} P
+              - {reward.carbon_credit_cost} P
             </Button>
           </div>
         </div>
         <div className="mt-5">
           <h3 className="heading">
-            Voucher - <br />
             {reward.name}
           </h3>
           <div className="c-details">
-            <p className="mb-0">You can get a rebate with this Voucher.</p>
+            <p className="mb-0">{reward.description}</p>
           </div>
           <div className="mt-5">
             <ProgressBar variant="success" now={50} />
             <div className="mt-3">
               <span className="text1">
-                {reward.quantity} Applied{" "}
-                <span className="text2">of 50 capacity</span>
+                {reward.available_quantity} Applied{" "}
+                <span className="text2">of {reward.available_quantity*2} capacity</span>
               </span>
             </div>
           </div>
