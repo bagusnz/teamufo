@@ -7,6 +7,7 @@ import RewardsCards from "./rewardsPage/RewardsCards";
 import Footer from "./Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardTemplate from "./cardTemplate/CardTemplate";
+import Profile from "./profile/Profile";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/rewardsCards" element={<RewardsCards />} />
           <Route path="/card" element={<CardTemplate />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
         <Footer />

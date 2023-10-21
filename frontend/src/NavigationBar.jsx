@@ -19,6 +19,7 @@ const NavigationBar = () => {
             <Nav.Link href="/challengeCards" className="text-white"><span>Challenge</span></Nav.Link>
             <Nav.Link href="/rewardsCards" className="text-white"><span>Rewards</span></Nav.Link>
             <Nav.Link href="/card" className="text-white"><span>Card Design</span></Nav.Link>
+            <Nav.Link href="/profile" className="text-white"><span>Profile</span></Nav.Link>
             <NavDropdown title={ <span className="text-white my-auto">Dropdown</span>} id="basic-nav-dropdown" >
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
