@@ -5,6 +5,7 @@ import React from "react";
 import bgimg from '../img/v990-129a.jpg';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Badge from "react-bootstrap/Badge";
 const trans = `rgba(210, 210, 210, 0.9)`;
 const cardTemplate = () => {
     return (
@@ -44,14 +45,50 @@ const cardTemplate = () => {
                                 <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
                             </div>
                             <Card.Body>
-                                <Card.Title>Card title</Card.Title>
+                                <Card.Title>Challenge title</Card.Title>
+                                <div>
+                                    <Badge bg="light" text="dark" className="mb-2 mr-2">Category1</Badge >
+                                    <Badge bg="light" text="dark" className="mb-2 mr-2">Category2</Badge >
+                                    <Badge bg="light" text="dark" className="mb-2 mr-2">Category3</Badge >
+                                </div>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                Here is the description.
                                 </Card.Text>
-                                <Button className="btn-success" href="#">Button</Button>
+
+                                <Button className="btn-success" href="#">+ 20 P</Button>
+
                             </Card.Body>
                         </Card>
                     </Col>
+
+                    <Col>
+
+                        <Card className="col-sm">
+                            <Card.Img
+                                src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
+                                alt="Card image"
+                                variant="top"
+                            />
+                            <div className="bg-image hover-overlay">
+                                <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                            </div>
+                            <Card.Body>
+                                <Card.Title>Challenge title</Card.Title>
+                                <div>
+                                    <Badge bg="light" text="dark" className="mb-2 mr-2">Category1</Badge >
+                                    <Badge bg="light" text="dark" className="mb-2 mr-2">Category2</Badge >
+                                    <Badge bg="light" text="dark" className="mb-2 mr-2">Category3</Badge >
+                                </div>
+                                <Card.Text>
+                                    Here is the description.
+                                </Card.Text>
+
+                                <Button className="btn-success" href="#">+ 20 P</Button>
+
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
                     <Col>
                         <Card className="col-sm">
                             <Card.Img
@@ -63,30 +100,18 @@ const cardTemplate = () => {
                                 <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
                             </div>
                             <Card.Body>
-                                <Card.Title>Card title</Card.Title>
+                                <Card.Title>Challenge title</Card.Title>
+                                <div>
+                                    <Badge bg="light" text="dark" className="mb-2 mr-2">Category1</Badge >
+                                    <Badge bg="light" text="dark" className="mb-2 mr-2">Category2</Badge >
+                                    <Badge bg="light" text="dark" className="mb-2 mr-2">Category3</Badge >
+                                </div>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    Here is the description.
                                 </Card.Text>
-                                <Button className="btn-success" href="#">Button</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col>
-                        <Card className="col-sm">
-                            <Card.Img
-                                src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
-                                alt="Card image"
-                                variant="top"
-                            />
-                            <div className="bg-image hover-overlay">
-                                <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                            </div>
-                            <Card.Body>
-                                <Card.Title>Card title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of the card's content.
-                                </Card.Text>
-                                <Button className="btn-success" href="#">Button</Button>
+
+                                <Button className="btn-success" href="#">+ 20 P</Button>
+
                             </Card.Body>
                         </Card>
                     </Col>
