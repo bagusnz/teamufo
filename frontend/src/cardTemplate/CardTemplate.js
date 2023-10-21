@@ -28,7 +28,8 @@ const cardTemplate = () => {
 
                     }}
                 >
-                    <p style={{border: '10px solid white', padding: 30, backgroundColor: trans}}><h1 className="top-div">Do your Challenges</h1></p>
+                    <p style={{border: '10px solid white', padding: 30, backgroundColor: trans}}><h1 className="top-div">
+                        Do Your Challenges</h1></p>
                 </div>
             </div>
             <div >

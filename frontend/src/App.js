@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardTemplate from "./cardTemplate/CardTemplate";
 import Profile from "./profile/Profile";
+import RewardTemplate from "./rewardTemplate/RewardTemplate";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/challengeCards" element={<ChallengeCards />} />
           <Route path="/rewardsCards" element={<RewardsCards />} />
           <Route path="/card" element={<CardTemplate />} />
+          <Route path="/reward" element={<RewardTemplate />} />
           <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
