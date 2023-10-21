@@ -6,6 +6,7 @@ import bgimg from '../img/v990-129a.jpg';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
+import LeaderBoard from "./LeaderBoard";
 const trans = `rgba(210, 210, 210, 0.9)`;
 const cardTemplate = () => {
     return (
@@ -24,8 +25,6 @@ const cardTemplate = () => {
                         flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
-
-
                     }}
                 >
                     <p style={{border: '10px solid white', padding: 30, backgroundColor: trans}}><h1 className="top-div">
@@ -63,7 +62,6 @@ const cardTemplate = () => {
                     </Col>
 
                     <Col>
-
                         <Card className="col-sm">
                             <Card.Img
                                 src="https://mdbootstrap.com/img/new/standard/nature/111.webp"
@@ -118,6 +116,7 @@ const cardTemplate = () => {
                     </Col>
                 </Row>
             </Container>
+                <LeaderBoard></LeaderBoard>
             </div>
 
         </>
