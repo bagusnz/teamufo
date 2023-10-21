@@ -4,6 +4,7 @@ export const challenge1 = {
   description: "Description 1",
   category: "Category 1",
   carboncredit: 10,
+  image: null,
 };
 
 export const challenge2 = {
@@ -12,6 +13,7 @@ export const challenge2 = {
   description: "Description 2",
   category: "Category 2",
   carboncredit: 5,
+  image: null,
 };
 
 export const challenge3 = {
@@ -20,6 +22,7 @@ export const challenge3 = {
   description: "Description 3",
   category: "Category 3",
   carboncredit: 15,
+  image: null,
 };
 
 export const challenge4 = {
@@ -28,6 +31,7 @@ export const challenge4 = {
   description: "Description 4",
   category: "Category 4",
   carboncredit: 20,
+  image: null,
 };
 
 export const challenges = [challenge1, challenge2, challenge3, challenge4];
