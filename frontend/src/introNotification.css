@@ -18,6 +18,7 @@
 }
 
 .light {
+    margin: 50px 0;
     background: #f3f5f7;
 }
 
@@ -39,10 +40,11 @@ a, a:hover {
     display: flex;
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
     border-radius: 10px;
-    margin: 0 0 2rem 0;
+
+    margin: 0 2em 2rem 2em;
     overflow: hidden;
     position: relative;
-    color: #ffffff;
+    color: #000000;
 }
 
 .postcard.dark {
