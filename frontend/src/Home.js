@@ -1,8 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
 import sustainable from "./img/sustainable.jpg";
 import forest from "./img/greenforest.jpg";
@@ -10,7 +6,6 @@ import green from "./img/green.jpg";
 import Values from "./values";
 import IntroNotification from "./introNotification";
 import TeamMember from "./TeamMember";
-
 
 const Home = () => {
   return (
@@ -27,7 +22,8 @@ const Home = () => {
               <h1>#SustainableTomorrow</h1>
               <h1>Team UFO</h1>
               <p>
-                powered by Google Cloud<br/>
+                powered by Google Cloud
+                <br />
                 from Collabothon 2023
               </p>
             </Carousel.Caption>
@@ -41,7 +37,8 @@ const Home = () => {
             <Carousel.Caption>
               <h1>#SustainableTomorrow</h1>
               <p>
-                powered by Google Cloud<br/>
+                powered by Google Cloud
+                <br />
                 from Collabothon 2023
               </p>
             </Carousel.Caption>
@@ -55,7 +52,8 @@ const Home = () => {
             <Carousel.Caption>
               <h1>#SustainableTomorrow</h1>
               <p>
-                powered by Google Cloud<br/>
+                powered by Google Cloud
+                <br />
                 from Collabothon 2023
               </p>
             </Carousel.Caption>
@@ -63,11 +61,11 @@ const Home = () => {
         </Carousel>
 
         <Values />
-        <div style={{marginBottom:300}}></div>
+        <div style={{ marginBottom: 100 }}></div>
         <IntroNotification />
-        <div style={{marginBottom:300}}></div>
+        <div style={{ marginBottom: 100 }}></div>
         <TeamMember />
-        <div style={{marginBottom:300}}></div>
+        <div style={{ marginBottom: 100 }}></div>
       </main>
     </>
   );
