@@ -19,15 +19,19 @@
 }
 .column:hover {
     padding-left: 0;
+    transition: 0.5s;
 }
 .column:hover .card .txt {
+    transition: 0.5s;
     margin-left: 1rem;
 }
 .column:hover .card .txt h1, .column:hover .card .txt p {
     color: rgba(255, 255, 255, 1);
     opacity: 1;
+    transition: 0.5s;
 }
 .column:hover a {
+    transition: 0.5s;
     color: rgba(255, 255, 255, 1);
 }
 .column:hover a:after {
@@ -47,6 +51,7 @@
     margin-bottom: 70px;
 }
 .card {
+    transition: 0.5s;
     min-height: 170px;
     margin: 0;
     padding: 1.7rem 1.2rem;
@@ -75,6 +80,7 @@
     color: rgba(255, 255, 255, 1);
 }
 .card a {
+    transition: 0.5s;
     z-index: 3;
     font-size: 0.7rem;
     color: rgba(0, 0, 0, 1);
