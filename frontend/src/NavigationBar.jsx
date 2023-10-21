@@ -27,7 +27,11 @@ const NavigationBar = () => {
             <Nav.Link href="/rewards" className="text-white">
               <span className="tab-animation">Rewards</span>
             </Nav.Link>
-
+            <Nav.Link href="/calculator" className="text-white">
+              <span className="tab-animation">
+                kWh to CO<sub>2</sub>
+              </span>
+            </Nav.Link>
             <Nav.Link href="/profile" className="text-white">
               <span className="tab-animation">Profile</span>
             </Nav.Link>
