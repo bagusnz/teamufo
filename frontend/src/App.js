@@ -9,6 +9,7 @@ import Profile from "./profile/Profile";
 import RewardTemplate from "./rewardTemplate/RewardTemplate";
 import ChallengePage from "./challengePage/ChallengePage";
 import RewardsPage from "./rewardsPage/RewardsPage";
+import LoginForm from "./loginForm/LoginForm";
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route path="/challenges" element={<ChallengePage />} />
           <Route path="/rewards" element={<RewardsPage />} />
-          <Route path="/card" element={<CardTemplate />} />
+          <Route path="/login" element={<LoginForm />} />
           <Route path="/reward" element={<RewardTemplate />} />
           <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<Profile />} />

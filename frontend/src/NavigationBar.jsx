@@ -27,8 +27,8 @@ const NavigationBar = () => {
             <Nav.Link href="/rewards" className="text-white">
               <span className="tab-animation">Rewards</span>
             </Nav.Link>
-            <Nav.Link href="/card" className="text-white">
-              <span className="tab-animation">Challenge Design</span>
+            <Nav.Link href="/login" className="text-white">
+              <span className="tab-animation">Login</span>
             </Nav.Link>
             <Nav.Link href="/reward" className="text-white">
               <span className="tab-animation">Reward Design</span>
