@@ -24,10 +24,12 @@ const Home = () => {
               alt="First slide"
             />
             <Carousel.Caption className="carousel-center">
-              <h1>First slide label</h1>
+              <h1>#SustainableTomorrow</h1>
+              <h1>Team UFO</h1>
               <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          My Points: 400    </p>
+                powered by Google Cloud<br/>
+                from Collabothon 2023
+              </p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -37,8 +39,11 @@ const Home = () => {
               alt="Second slide"
             />
             <Carousel.Caption>
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h1>#SustainableTomorrow</h1>
+              <p>
+                powered by Google Cloud<br/>
+                from Collabothon 2023
+              </p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -48,20 +53,21 @@ const Home = () => {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h5>Third slide label</h5>
+              <h1>#SustainableTomorrow</h1>
               <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                powered by Google Cloud<br/>
+                from Collabothon 2023
               </p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
 
         <Values />
-
+        <div style={{marginBottom:300}}></div>
         <IntroNotification />
-
+        <div style={{marginBottom:300}}></div>
         <TeamMember />
-
+        <div style={{marginBottom:300}}></div>
       </main>
     </>
   );
