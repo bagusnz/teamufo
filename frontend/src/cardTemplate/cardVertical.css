@@ -1,0 +1,19 @@
+.card-size {
+    height: 100px;
+    width: 80px;
+    margin: 30px;
+}
+
+.top-banner{
+    height: 450px;
+}
+
+.top-div{
+    border: 20px solid white;
+}
+
+
+.place-margin {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
