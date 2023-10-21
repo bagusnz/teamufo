@@ -7,6 +7,7 @@ import Profile from "./profile/Profile";
 import ChallengePage from "./challengePage/ChallengePage";
 import RewardsPage from "./rewardsPage/RewardsPage";
 import LoginForm from "./loginForm/LoginForm";
+import Values from "./values";
 
 const App = () => {
   return (

@@ -7,6 +7,8 @@ import Carousel from "react-bootstrap/Carousel";
 import sustainable from "./img/sustainable.jpg";
 import forest from "./img/greenforest.jpg";
 import green from "./img/green.jpg";
+import Values from "./values";
+
 
 const Home = () => {
   return (
@@ -23,7 +25,7 @@ const Home = () => {
               <h1>First slide label</h1>
               <p>
                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+          My Points: 400    </p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -51,8 +53,10 @@ const Home = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
+
+        <Values />
+
         <div className="position-relative">
-          {/* shape Hero */}
           <section className="section section-lg section-shaped pb-250">
             <div className="shape shape-style-1 shape-default"></div>
             <Container className="py-lg-md d-flex">

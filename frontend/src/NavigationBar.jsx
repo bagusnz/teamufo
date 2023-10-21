@@ -27,9 +27,7 @@ const NavigationBar = () => {
             <Nav.Link href="/rewards" className="text-white">
               <span className="tab-animation">Rewards</span>
             </Nav.Link>
-            <Nav.Link href="/login" className="text-white">
-              <span className="tab-animation">Login</span>
-            </Nav.Link>
+
             <Nav.Link href="/profile" className="text-white">
               <span className="tab-animation">Profile</span>
             </Nav.Link>
@@ -47,6 +45,9 @@ const NavigationBar = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="/login" className="text-white loginSpan">
+              <span className="tab-animation">Login</span>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
