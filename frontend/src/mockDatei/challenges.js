@@ -22,4 +22,12 @@ export const challenge3 = {
   carboncredit: 15,
 };
 
-export const challenges = [challenge1, challenge2, challenge3];
+export const challenge4 = {
+  id: 4,
+  title: "Challenge 4",
+  description: "Description 4",
+  category: "Category 4",
+  carboncredit: 20,
+};
+
+export const challenges = [challenge1, challenge2, challenge3, challenge4];

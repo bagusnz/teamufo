@@ -5,11 +5,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import RewardsCards from "./rewardsPage/RewardsCards";
 import Footer from "./Footer";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import CardTemplate from "./cardTemplate/CardTemplate";
 import Profile from "./profile/Profile";
 import RewardTemplate from "./rewardTemplate/RewardTemplate";
-
+import ChallengePage from "./challengePage/ChallengePage";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/challengeCards" element={<ChallengeCards />} />
+          <Route path="/challengeCards" element={<ChallengePage />} />
           <Route path="/rewardsCards" element={<RewardsCards />} />
           <Route path="/card" element={<CardTemplate />} />
           <Route path="/reward" element={<RewardTemplate />} />
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
-        <Footer />
+      <Footer />
     </>
   );
 };
