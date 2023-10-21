@@ -10,7 +10,6 @@ const Values = () => {
     const trans = `rgba(210, 210, 210, 0.9)`;
     return (
         <>
-
             <Container >
                 <div >
                     <Row >
