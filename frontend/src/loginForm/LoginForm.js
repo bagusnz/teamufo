@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import bgimg from "../img/doForCo2.jpg";
+import bgimg from "../img/loginGreen.jpg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {faGoogle} from "@fortawesome/free-brands-svg-icons";
@@ -14,9 +14,12 @@ function LoginForm() {
             <Container className="loginDiv mt-5">
                 <Row style={{
                     backgroundColor: "white",
-                    padding: 50
+                    padding: 50,
+                    boxShadow: '5px 5px 5px gray'
                 }}>
-                    <Col md={6}>
+                    <Col md={6} style={{
+                        margin:'auto'
+                    }}>
                         <div className="loginImg">
                             <img src={bgimg} alt="Image"
                                  style={{
