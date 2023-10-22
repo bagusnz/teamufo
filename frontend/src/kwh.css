@@ -1,0 +1,7 @@
+.postcard .noshadow {
+    box-shadow: none !important;
+}
+
+.calcul {
+    margin: 0 auto;
+}

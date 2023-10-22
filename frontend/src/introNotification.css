@@ -38,15 +38,16 @@ a, a:hover {
 .postcard {
     flex-wrap: wrap;
     display: flex;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
     border-radius: 10px;
-
     margin: 0 2em 2rem 2em;
     overflow: hidden;
     position: relative;
     color: #000000;
 }
 
+.postcard .infoTab {
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+}
 .postcard.dark {
     background-color: #18151f;
 }

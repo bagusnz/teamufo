@@ -8,6 +8,7 @@ import IntroNotification from "./introNotification";
 import TeamMember from "./TeamMember";
 
 const Home = () => {
+  const trans = `rgba(240, 240, 240, 0.7)`;
   return (
     <>
       <main>
@@ -19,13 +20,23 @@ const Home = () => {
               alt="First slide"
             />
             <Carousel.Caption className="carousel-center">
-              <h1>#SustainableTomorrow</h1>
-              <h1>Team UFO</h1>
-              <p>
-                powered by Google Cloud
-                <br />
-                from Collabothon 2023
-              </p>
+              <div style={{
+                backgroundColor: trans,
+                padding:50,
+                transition: 0.5,
+                color: 'black',
+                borderRadius: 10000,
+
+              }}>
+                <h1>#SustainableTomorrow</h1>
+                <h1>Team UFO</h1>
+                <p>
+                  powered by Google Cloud
+                  <br />
+                  from Collabothon 2023
+                </p>
+              </div>
+
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import PageBanner from "./PageBanner";
+import Questions from "./img/Questions-pana.png";
+import community from "./img/Online-world.png";
 
 const KwhToCO2Calculator = () => {
   const [kwhInput, setKwhInput] = useState("");
@@ -42,15 +44,17 @@ const KwhToCO2Calculator = () => {
     <>
       <PageBanner title={"CO2 Calculator"} />
       <Container>
+
         <Row>
-          <Col md={6} className="mt-5">
+          <Col></Col>
+          <Col md={10} className="mt-5 light calcul">
             <Form>
               <Form.Group>
                 <Form.Label>Enter Energy Consumption (kWh)</Form.Label>
                 <Form.Control
-                  type="number"
-                  value={kwhInput}
-                  onChange={handleKwhInputChange}
+                    type="number"
+                    value={kwhInput}
+                    onChange={handleKwhInputChange}
                 />
               </Form.Group>
               <Form.Group>
@@ -58,33 +62,69 @@ const KwhToCO2Calculator = () => {
                   House Size (m<sup>2</sup>)
                 </Form.Label>
                 <Form.Control
-                  type="number"
-                  value={houseSize}
-                  onChange={handleHouseSizeChange}
+                    type="number"
+                    value={houseSize}
+                    onChange={handleHouseSizeChange}
                 />
               </Form.Group>
               <Form.Group>
                 <Form.Label>Number of People</Form.Label>
                 <Form.Control
-                  type="number"
-                  value={peopleCount}
-                  onChange={handlePeopleCountChange}
+                    type="number"
+                    value={peopleCount}
+                    onChange={handlePeopleCountChange}
                 />
               </Form.Group>
             </Form>
-            <div>
-              <p>
-                CO<sub>2</sub> Emissions: {co2Emissions} kg
+            <div className="m-3">
+              <p >
+                CO<sub>2</sub> Emissions: <strong>{co2Emissions} kg</strong>
               </p>
               <p>
-                CO<sub>2</sub> Credits: {co2Credits} kg
+                CO<sub>2</sub> Credits: <strong>{co2Credits} kg</strong>
               </p>
               <p>
-                CO<sub>2</sub> Credits Per Person: {co2CreditsPerPerson} kg
+                CO<sub>2</sub> Credits Per Person: <strong>{co2CreditsPerPerson} kg</strong>
+              </p>
+              <p>
+                The formula to calculate CO<sub>2</sub> emission refers to chatgpt.
               </p>
             </div>
           </Col>
+          <Col></Col>
         </Row>
+        <Row>
+          <section >
+            <div className="container py-4">
+
+              <article className="postcard light">
+                <a className="postcard__img_link" href="#">
+                  <img
+                      className="postcard__img"
+                      src={Questions}
+                      alt="Image Title"
+                  />
+                </a>
+                <div className="postcard__text">
+                  <h1 className="postcard__title blue">What is Carbon Footprint?</h1>
+                  <div className="postcard__subtitle small">
+                      <i className="fas fa-calendar-alt mr-2"></i>Mike Berners-Lee,
+                    Professor at Lancaster University in the UK and
+                    Author of <span class="fst-italic">"The Carbon Footprint of Everything"</span>
+                  </div>
+                  <div className="postcard__bar"></div>
+                  <div className="postcard__preview-txt">
+                      "It is “the sum total of all the greenhouse gas emissions that had to take place in order for a product to be produced or for an activity to take place.”
+                    <br />
+                    <a href="https://www.nationalgeographic.com/environment/article/what-is-a-carbon-footprint-how-to-measure-yours">Source</a>
+
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </Row>
+
       </Container>
     </>
   );
