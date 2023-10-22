@@ -1,4 +1,4 @@
-import { collection, doc, addDoc, getDocs, setDoc, deleteDoc, query, where } from "firebase/firestore";
+import { collection, doc, addDoc, getDocs, setDoc, deleteDoc, query, where, orderBy, limit } from "firebase/firestore";
 import { db } from "../firebase";
 import { isSingleAttributeUnique } from "./rules";
 
@@ -57,9 +57,46 @@ export const readUserByEmail = async (email) => {
   }
 };
 
+export const readTopUsersWithCarbonCredits = async() => {
+  try {
+    const usersCollection = collection(db, 'users'); 
+
+    // Create a query to get the top 5 users with the most carbon credits
+    const querySnapshot = await getDocs(query(usersCollection, orderBy('carbon_credits', 'desc'), limit(5)));
+
+    const topUsers = [];
+    querySnapshot.forEach((doc) => {
+      // Access user data from the document
+      const user = doc.data();
+      topUsers.push(user);
+    });
+
+    return topUsers;
+  } catch (error) {
+    console.error('Error fetching top users:', error);
+    throw error; // Optionally rethrow the error for error handling
+  }
+}
+
 export const updateUser = async (userId, updatedData) => {
   try {
-    const userRef = doc(db, "users", userId);
+    // Create a query to find the document with the matching user_id
+    const usersCollection = collection(db, "users");
+    const q = query(usersCollection, where("user_id", "==", userId));
+    
+    // Execute the query
+    const querySnapshot = await getDocs(q);
+    
+    // Check if a document with the matching user_id was found
+    if (querySnapshot.docs.length === 0) {
+      console.error("User not found");
+      return;
+    }
+    
+    // Get the first matching document and update its data
+    const userDoc = querySnapshot.docs[0];
+    const userRef = doc(usersCollection, userDoc.id);
+    
     await setDoc(userRef, updatedData, { merge: true });
   } catch (error) {
     console.error("Error updating user:", error);

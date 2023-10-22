@@ -4,23 +4,37 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Badge from "react-bootstrap/Badge";
 import Todo from '../img/To-do-list-cuate.png'
+import { updateUser } from "services/crud/UserCRUD";
 
-const ChallengeCard = ({ challenge, points, setPoints }) => {
-  //TODO: get userid from Cache? or from backend?
+const ChallengeCard = ({ challenge, user, setPoints }) => {
   const [todo, setTodo] = useState(true);
 
-  const handleTodo = () => {
-    todo
-      ? setPoints(points + challenge.carbon_credits)
-      : setPoints(points - challenge.carbon_credits);
+  const handleTodo = async () => {
+    if(todo){
+      user.carbon_credits += + challenge.carbon_credits
+    } else {
+      user.carbon_credits -= challenge.carbon_credits
+    }
+    await updateUser(user.user_id, user);
+    setPoints(user.carbon_credits)
     setTodo(!todo);
+  };
+
+  const categoryImages = {
+    "Environmental": "https://firebasestorage.googleapis.com/v0/b/collabothon23fra-1257.appspot.com/o/environmental.jpg?alt=media&token=1479d546-04d4-432a-ad8d-2816adcfa6f2",
+    "Health": "https://firebasestorage.googleapis.com/v0/b/collabothon23fra-1257.appspot.com/o/health.jpg?alt=media&token=b795456b-6192-4968-9811-003f06d524ef",
+    "Wellness": "https://firebasestorage.googleapis.com/v0/b/collabothon23fra-1257.appspot.com/o/wellness.jpg?alt=media&token=5ef2547b-4f37-43bb-9a60-258c2916d947",
+    "Fitness": "https://firebasestorage.googleapis.com/v0/b/collabothon23fra-1257.appspot.com/o/fitness.jpg?alt=media&token=354fe464-2113-4632-beec-84c17f5e70b2",
+    "Community": "https://firebasestorage.googleapis.com/v0/b/collabothon23fra-1257.appspot.com/o/community.jpg?alt=media&token=6ceab60e-e00a-4ff1-b371-59d35121be42",
+    "Personal Growth": "https://firebasestorage.googleapis.com/v0/b/collabothon23fra-1257.appspot.com/o/personal_growth.jpg?alt=media&token=a91f4d94-6a59-4177-9baf-be90423d51ac",
   };
 
   return (
     <Col sm={4}>
       <Card className="col-sm mb-4">
         <Card.Img
-          src={Todo}
+          // src={Todo}
+          src={categoryImages[challenge.category]}
           alt="Card image"
           variant="top"
         />

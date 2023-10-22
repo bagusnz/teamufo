@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Modal from "react-bootstrap/Modal";
+import { updateUser } from "services/crud/UserCRUD";
 
 const RewardsCard = ({ reward, user, setPoints }) => {
   const [show, setShow] = useState(false);
@@ -16,13 +17,14 @@ const RewardsCard = ({ reward, user, setPoints }) => {
   };
 
   const isUserLoggedIn = user !== null;
-  const isAffordable = user.carbon_credits >= reward.carbon_credit_cost;
+  const isAffordable = user?.carbon_credits >= reward.carbon_credit_cost;
   const isRewardAvailable = reward.available_quantity > 0;
 
-  const handleBuy = () => {
+  const handleBuy = async () => {
     handleClose();
     if (user) {
       user.carbon_credits = user.carbon_credits - reward.carbon_credit_cost;
+      await updateUser(user.user_id, user);
       setPoints(user.carbon_credits);
     }
   };
