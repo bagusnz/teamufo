@@ -11,19 +11,24 @@ import Button from 'react-bootstrap/Button';
 import bgimg from "../img/loginGreen.jpg";
 import { onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from 'services/firebase';
+import { useNavigate } from 'react-router-dom';
+import { createUser } from 'services/crud/UserCRUD';
+import User from 'models/UserModel';
 
 
 function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleSignup = async () => {
         try {
             await createUserWithEmailAndPassword(auth, email, password);
             // User signup is successful
             setErrorMessage('');
-            alert('Signup successful! You can now log in.');
+            await createUser(new User(generateRandomId(), email.split('@')[0], email, 0, 0, Date.now(), null).toObject())
+            window.location.replace('/challenges')
         } catch (error) {
             setErrorMessage(error.message);
         }
@@ -34,23 +39,23 @@ function LoginForm() {
             await signInWithEmailAndPassword(auth, email, password);
             // User sign-in is successful
             setErrorMessage('');
-            alert('Sign-in successful!');
+            console.log('Sign-in successful!');
+            navigate('/challenges');
         } catch (error) {
+            alert("Login is not successfull. Please try again!")
             setErrorMessage(error.message);
         }
     };
 
-    async function signUserOut() {
-        try {
-            await signOut(auth);
-            // User has been signed out
-            console.log('User signed out');
-        } catch (error) {
-            console.error('Error signing out:', error);
-            throw error; // Optionally rethrow the error for error handling
-        }
+    function generateRandomId() {
+        // Generate a random number between 1 and 1000 (adjust the range as needed)
+        const randomNumber = Math.floor(Math.random() * 1000) + 1;
+        // You can add a timestamp or other unique identifier to reduce collisions
+        const timestamp = Date.now();
+        // Combine the random number and timestamp to create a more unique ID
+        const randomId = `${timestamp}-${randomNumber}`;
+        return randomId;
     }
-
 
 
     return (
@@ -73,8 +78,8 @@ function LoginForm() {
                     <Row className="justify-content-center">
                         <Col md={8}>
                             <div className="mb-4">
-                                <h3>Sign In</h3>
-                                <p className="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
+                                <h3>Log in</h3>
+                                <p className="mb-4">Log in or register to access your account and start your journey.</p>
                             </div>
                             <Form action="#" method="post">
                                 <Form.Group className="first">
@@ -96,9 +101,9 @@ function LoginForm() {
                                         <a href="/" className="forgot-pass">Forgot Password</a>
                                     </span>
                                 </div> */}
-                                <Button onClick={handleSignIn} className="btn btn-block btn-primary" >Log In</Button>
-                                <Button onClick={handleSignup} className="btn btn-block btn-primary">Register</Button>
-                                <Button onClick={signUserOut} className="btn btn-block btn-primary">Log Out</Button>
+                                <Button onClick={handleSignIn} className="btn btn-block btn-success" >Log In</Button>
+                                &nbsp;
+                                <Button onClick={handleSignup} className="btn btn-block btn-success">Register</Button>
                                 {/* <span className="d-block text-left my-4 text-muted"> or login with </span>
                                 <div className="social-login">
                                     <span className="mr-2"><a href="/" className="mr-2">
