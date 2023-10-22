@@ -23,7 +23,7 @@ const ChallengeCards = () => {
   return (
     <>
       <Container>
-        {user && <UserPointInfo user={user} />}
+        <UserPointInfo user={user} />
         <Row>
           {challenges.map((challenge) => (
             <ChallengeCard

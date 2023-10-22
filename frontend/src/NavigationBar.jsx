@@ -31,7 +31,7 @@ const NavigationBar = () => {
     <Navbar expand="lg" className="bg-success bar-bottom">
       <Container>
         <Navbar.Brand as={Link} to="/" className="text-white">
-          <FontAwesomeIcon icon={faSeedling} /> Your co2{" "}
+          <FontAwesomeIcon icon={faSeedling} /> Your CO2{" "}
           <FontAwesomeIcon icon={faSeedling} />
         </Navbar.Brand>
         <Navbar.Toggle
@@ -47,7 +47,7 @@ const NavigationBar = () => {
               <NavDropdown.Item as={Link} to="/challenges">
                 Daily Challenges
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/quiz">Quizzes</NavDropdown.Item>
+              {/* <NavDropdown.Item as={Link} to="/quiz">Quizzes</NavDropdown.Item> */}
               <NavDropdown.Item as={Link} to="/ranking">Ranking</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/rewards" className="text-white">
@@ -58,9 +58,11 @@ const NavigationBar = () => {
                 kWh to CO<sub>2</sub>
               </span>
             </Nav.Link>
-            <Nav.Link as={Link} to="/profile" className="text-white">
+            
+            {/* <Nav.Link as={Link} to="/profile" className="text-white">
               <span className="tab-animation">Profile</span>
-            </Nav.Link>
+            </Nav.Link> */}
+            
             {/* <NavDropdown
               title={<span className="text-white my-auto">Dropdown</span>}
               id="basic-nav-dropdown"
@@ -71,9 +73,13 @@ const NavigationBar = () => {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown> */}
-            <Nav.Link as={Link} to="/notify" className="text-white loginSpan">
-              <span className="tab-animation">Notify</span>
-            </Nav.Link>
+
+            {/* <Nav.Link as={Link} to="/notify" className="text-white loginSpan">
+              <span className="tab-animation">Notification</span>
+            </Nav.Link> */}
+          </Nav>
+
+          <Nav className="ml-auto"> {/* Use ml-auto to push items to the right */}
             {!user && <Nav.Link as={Link} to="/login" className="text-white loginSpan">
               <span className="tab-animation">Login</span>
             </Nav.Link>}
