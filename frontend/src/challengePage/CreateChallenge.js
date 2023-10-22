@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { createChallenge } from "services/crud/ChallengeCRUD";
+import { uploadImage } from "services/uploadService";
+import { generateRandomId } from "services/helper";
+import { useUser } from "services/userContext";
 
 const CreateChallenge = ({ show, onHide }) => {
+  const user = useUser()
+
+  const [image, setImage] = useState(null)
   const [challenge, setChallenge] = useState({
-    challenge_id: "3432432",
+    challenge_id: generateRandomId(),
     title: "",
     description: "",
     carbon_credits: 0,
     category: "",
-    created_by_user_email: null,
-    image: null,
+    created_by_user_email: user.email || null,
   });
 
   const handleInputChange = (e) => {
@@ -21,13 +26,14 @@ const CreateChallenge = ({ show, onHide }) => {
 
   const handleImageChange = (e) => {
     const imageFile = e.target.files[0];
-    setChallenge({ ...challenge, image: imageFile });
+    setImage(imageFile)
   };
 
   const handleSubmit = async () => {
     // Handle the submission of the challenge data (e.g., send it to a server).
     // You can use API calls or state management libraries for this.
     // After submission, you can close the dialog.
+    image && await uploadImage(image, image.name)
     await createChallenge(challenge);
     alert('Challenge created successfully!');
     onHide();
@@ -114,7 +120,7 @@ const CreateChallenge = ({ show, onHide }) => {
         <Button variant="secondary" onClick={onHide}>
           Close
         </Button>
-        <Button variant="primary" onClick={handleSubmit}>
+        <Button variant="success" onClick={handleSubmit}>
           Create Challenge
         </Button>
       </Modal.Footer>
