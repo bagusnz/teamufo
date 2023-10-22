@@ -21,7 +21,7 @@ const UserPointInfo = ({ user, points }) => {
       <Col>
         <div className="userInfo">
           <span>
-            <FontAwesomeIcon icon={faUser} /> Hello, {user.email}! You have{" "}
+            <FontAwesomeIcon icon={faUser} /> Hello, {user?.username}! You have{" "}
             <b>{points}</b> Points.
           </span>
           <span className="createSpan">

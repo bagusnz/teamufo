@@ -1,28 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import Modal from "react-bootstrap/Modal";
 
 const RewardsCard = ({ reward, user, setPoints }) => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+
   const handleCost = () => {
-    if (user && user.carbon_credits >= reward.carbon_credit_cost) {
-      handleBuy();
-    } else {
-      alert(
-        "your points are insufficient to place an order for the desired product.",
-      );
+    if (isUserLoggedIn) {
+      setShow(true);
     }
   };
 
+  const isUserLoggedIn = user !== null;
+  const isAffordable = user.carbon_credits >= reward.carbon_credit_cost;
   const isRewardAvailable = reward.available_quantity > 0;
 
   const handleBuy = () => {
+    handleClose();
     if (user) {
-      // console.log(user.carbon_credits)
       user.carbon_credits = user.carbon_credits - reward.carbon_credit_cost;
       setPoints(user.carbon_credits);
-      // console.log(user.carbon_credits)
     }
   };
 
@@ -43,10 +44,38 @@ const RewardsCard = ({ reward, user, setPoints }) => {
             <Button
               variant="danger"
               onClick={handleCost}
-              disabled={!isRewardAvailable && !user}
+              disabled={!isRewardAvailable && isUserLoggedIn}
             >
               - {reward.carbon_credit_cost} P
             </Button>
+            <Modal show={show} onHide={handleClose} animation centered>
+              <Modal.Header closeButton>
+                <Modal.Title>{reward.name}</Modal.Title>
+              </Modal.Header>
+              {isAffordable ? (
+                <Modal.Body>
+                  It is priced at <b>{reward.carbon_credit_cost}</b> points. Are
+                  you sure you want to buy it?
+                </Modal.Body>
+              ) : (
+                <Modal.Body>
+                  Your points are insufficient to place an order for the desired
+                  product.
+                </Modal.Body>
+              )}
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Cancel
+                </Button>
+                <Button
+                  variant="primary"
+                  onClick={handleBuy}
+                  disabled={!isAffordable}
+                >
+                  Buy
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </div>
         </div>
         <div className="mt-5">
