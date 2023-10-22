@@ -87,7 +87,7 @@ const KwhToCO2Calculator = () => {
                 CO<sub>2</sub> Credits Per Person: <strong>{co2CreditsPerPerson} kg</strong>
               </p>
               <p>
-                The formula to calculate CO<sub>2</sub> emission refers to chatgpt.
+                The formula to calculate CO<sub>2</sub> emission refers to ChatGPT.
               </p>
             </div>
           </Col>

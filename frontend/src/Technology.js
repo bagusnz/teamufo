@@ -26,10 +26,10 @@ const Technology = () => {
                             <Card.Body>
                                 <h1 className="tech-meta mb-2 text-black">Backend</h1>
                                 <h6 className="tech-title mt-0">
-                                    Datenbank - Firestore <br/>
-                                    User Authentication - Identity Platform <br/>
-                                    Storage - Cloud Storage <br/>
-                                    App Engine - React App Hosting
+                                    Firestore <br/>
+                                    Identity Platform <br/>
+                                    Cloud Storage <br/>
+                                    App Engine
                                 </h6>
                                 <small><i className="far fa-clock"></i> Collabothon 2023</small>
                             </Card.Body>

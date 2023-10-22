@@ -35,7 +35,7 @@ const Home = () => {
                 <p>
                   powered by Google Cloud
                   <br />
-                  from Collabothon 2023
+                  Collabothon 2023
                 </p>
               </div>
 
@@ -52,7 +52,7 @@ const Home = () => {
               <p>
                 powered by Google Cloud
                 <br />
-                from Collabothon 2023
+                Collabothon 2023
               </p>
             </Carousel.Caption>
           </Carousel.Item>
@@ -67,7 +67,7 @@ const Home = () => {
               <p>
                 powered by Google Cloud
                 <br />
-                from Collabothon 2023
+                Collabothon 2023
               </p>
             </Carousel.Caption>
           </Carousel.Item>
