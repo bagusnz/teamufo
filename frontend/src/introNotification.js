@@ -14,7 +14,7 @@ const IntroNotification = () => {
         </h1>
         <section className="light">
           <div className="container py-4">
-            <article className="postcard light blue">
+            <article className="postcard infoTab light blue">
               <a className="postcard__img_link" href="#">
                 <img className="postcard__img" src={Todo} alt="Image Title" />
               </a>
