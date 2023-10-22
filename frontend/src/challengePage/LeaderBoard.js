@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import PageBanner from "../PageBanner";
 import { readTopUsersWithCarbonCredits } from "services/crud/UserCRUD";
+import Ranking from "../img/ranking.png";
 
 const LeaderBoard = () => {
   const [topUsers, setTopUsers] = useState([]);
@@ -21,6 +22,7 @@ const LeaderBoard = () => {
   return (
     <>
       <PageBanner title={"Leader Board"} />
+
       <Container className="mt-5">
         <Row>
           <Col></Col>
@@ -57,6 +59,32 @@ const LeaderBoard = () => {
           <Col></Col>
         </Row>
       </Container>
+      <Row>
+        <section >
+          <div className="container py-4">
+
+            <article className="postcard light">
+              <a className="postcard__img_link" href="#">
+                <img
+                    className="postcard__img"
+                    src={Ranking}
+                    alt="Image Title"
+                />
+              </a>
+              <div className="postcard__text">
+                <h1 className="postcard__title blue">Check Weekly Ranking</h1>
+                <div className="postcard__subtitle small">
+
+                </div>
+                <div className="postcard__bar"></div>
+                <div className="postcard__preview-txt">
+                  Have a look at who has the most points each week
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </Row>
     </>
   );
 };
