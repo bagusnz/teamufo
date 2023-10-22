@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import PageBanner from "../PageBanner";
 import { readTopUsersWithCarbonCredits } from "services/crud/UserCRUD";
 import Ranking from "../img/ranking.png";
+import ToastExample from "../ToastExample";
 
 const LeaderBoard = () => {
   const [topUsers, setTopUsers] = useState([]);
@@ -24,6 +25,8 @@ const LeaderBoard = () => {
       <PageBanner title={"Leader Board"} />
 
       <Container className="mt-5">
+
+        <ToastExample/>
         <Row>
           <Col></Col>
           <Col>
