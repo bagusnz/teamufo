@@ -40,7 +40,7 @@ function LoginForm() {
             // User sign-in is successful
             setErrorMessage('');
             console.log('Sign-in successful!');
-            navigate('/challenges');
+            navigate('/');
         } catch (error) {
             alert("Login is not successfull. Please try again!")
             setErrorMessage(error.message);

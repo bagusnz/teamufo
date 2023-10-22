@@ -4,15 +4,19 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Badge from "react-bootstrap/Badge";
 import Todo from '../img/To-do-list-cuate.png'
+import { updateUser } from "services/crud/UserCRUD";
 
-const ChallengeCard = ({ challenge, points, setPoints }) => {
-  //TODO: get userid from Cache? or from backend?
+const ChallengeCard = ({ challenge, user, setPoints }) => {
   const [todo, setTodo] = useState(true);
 
-  const handleTodo = () => {
-    todo
-      ? setPoints(points + challenge.carbon_credits)
-      : setPoints(points - challenge.carbon_credits);
+  const handleTodo = async () => {
+    if(todo){
+      user.carbon_credits += + challenge.carbon_credits
+    } else {
+      user.carbon_credits -= challenge.carbon_credits
+    }
+    await updateUser(user.user_id, user);
+    setPoints(user.carbon_credits)
     setTodo(!todo);
   };
 

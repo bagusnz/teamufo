@@ -8,7 +8,7 @@ import CreateChallenge from "./CreateChallenge";
 import { useState } from "react";
 import User from "models/UserModel";
 
-const UserPointInfo = ({ user, points }) => {
+const UserPointInfo = ({ user }) => {
   const [showCreateDialog, setShowCreateDialog] = useState(false);
 
   const handleCreateClick = () => {
@@ -22,7 +22,7 @@ const UserPointInfo = ({ user, points }) => {
         <div className="userInfo">
           <span>
             <FontAwesomeIcon icon={faUser} /> Hello, {user?.username}! You have{" "}
-            <b>{points}</b> Points.
+            <b>{user?.carbon_credits}</b> Points.
           </span>
           <span className="createSpan">
             <Button

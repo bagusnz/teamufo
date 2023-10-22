@@ -80,7 +80,23 @@ export const readTopUsersWithCarbonCredits = async() => {
 
 export const updateUser = async (userId, updatedData) => {
   try {
-    const userRef = doc(db, "users", userId);
+    // Create a query to find the document with the matching user_id
+    const usersCollection = collection(db, "users");
+    const q = query(usersCollection, where("user_id", "==", userId));
+    
+    // Execute the query
+    const querySnapshot = await getDocs(q);
+    
+    // Check if a document with the matching user_id was found
+    if (querySnapshot.docs.length === 0) {
+      console.error("User not found");
+      return;
+    }
+    
+    // Get the first matching document and update its data
+    const userDoc = querySnapshot.docs[0];
+    const userRef = doc(usersCollection, userDoc.id);
+    
     await setDoc(userRef, updatedData, { merge: true });
   } catch (error) {
     console.error("Error updating user:", error);
