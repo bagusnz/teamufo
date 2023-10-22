@@ -49,8 +49,9 @@ function LoginForm() {
     };
 
 
+
     return (
-        <Container className="loginDiv mt-5">
+        <Container className="loginDiv light mt-5">
             <Row style={{
                 backgroundColor: "white",
                 padding: 50
@@ -60,13 +61,13 @@ function LoginForm() {
                         <img src={bgimg} alt="Image"
                             style={{
                                 resizeMode: 'cover',
-                                height: 400,
-                                width: 550
+                                height: '30rem'
                             }} />
                     </div>
                 </Col>
                 <Col md={6} className="contents">
                     <Row className="justify-content-center">
+                        <Col></Col>
                         <Col md={8}>
                             <div className="mb-4">
                                 <h3>Log in</h3>
@@ -92,9 +93,17 @@ function LoginForm() {
                                         <a href="/" className="forgot-pass">Forgot Password</a>
                                     </span>
                                 </div> */}
-                                <Button onClick={handleSignIn} className="btn btn-block btn-success" >Log In</Button>
-                                &nbsp;
-                                <Button onClick={handleSignup} className="btn btn-block btn-success">Register</Button>
+                                <Row >
+                                    <Col>
+                                        <Button onClick={handleSignIn} className="btn btn-block btn-success float-left mb-3" >Log In</Button>
+                                    </Col>
+                                    <Col></Col>
+                                    <Col style={{ display: "flex", justifyContent: 'flex-end' }}>
+
+                                            <Button onClick={handleSignup} className="btn btn-block btn-success mb-3" style={{ marginLeft: "auto" }} >Register</Button>
+
+                                        </Col>
+                                </Row>
                                 {/* <span className="d-block text-left my-4 text-muted"> or login with </span>
                                 <div className="social-login">
                                     <span className="mr-2"><a href="/" className="mr-2">

@@ -3,15 +3,19 @@ p {
     color: #b3b3b3;
     font-weight: 300; }
 
-
+.floatRight {
+    float: right
+}
 
 .loginDiv {
     background-color: white;
     margin-top: 50px;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
 }
 
-.loginDiv {
-    height: 1rem;
+.loginImg {
+    background-image: url("../img/loginGreen.jpg");
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 991.98px) {
