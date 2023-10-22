@@ -6,7 +6,6 @@ import "./UserPointInfo.css";
 import Button from "react-bootstrap/Button";
 import CreateChallenge from "./CreateChallenge";
 import { useState } from "react";
-import User from "models/UserModel";
 
 const UserPointInfo = ({ user }) => {
   const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -26,7 +25,7 @@ const UserPointInfo = ({ user }) => {
           </span>
           <span className="createSpan">
             <Button
-              variant="primary"
+              variant="success"
               className="button"
               onClick={handleCreateClick}
             >
