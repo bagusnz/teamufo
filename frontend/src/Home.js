@@ -6,6 +6,7 @@ import green from "./img/green.jpg";
 import Values from "./values";
 import IntroNotification from "./introNotification";
 import TeamMember from "./TeamMember";
+import Technology from "./Technology";
 
 const Home = () => {
   const trans = `rgba(240, 240, 240, 0.7)`;
@@ -76,6 +77,8 @@ const Home = () => {
         <IntroNotification />
         <div style={{ marginBottom: 100 }}></div>
         <TeamMember />
+        <div style={{ marginBottom: 100 }}></div>
+        <Technology />
         <div style={{ marginBottom: 100 }}></div>
       </main>
     </>
