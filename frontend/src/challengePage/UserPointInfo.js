@@ -19,25 +19,29 @@ const UserPointInfo = ({ user }) => {
     <Row>
       <Col>
         <div className="userInfo">
-          <span>
-            <FontAwesomeIcon icon={faUser} /> Hello, {user?.username}! You have{" "}
-            <b>{user?.carbon_credits}</b> Points.
-          </span>
-          <span className="createSpan">
-            <Button
-              variant="success"
-              className="button"
-              onClick={handleCreateClick}
-            >
-              Create Challenge
-            </Button>
-            {showCreateDialog && (
-              <CreateChallenge
-                show={showCreateDialog}
-                onHide={() => setShowCreateDialog(false)}
-              />
-            )}
-          </span>
+          {
+            user ?
+            <span>
+              <FontAwesomeIcon icon={faUser} /> Hello, {user?.username}! You have{" "}
+              <b>{user?.carbon_credits}</b> Points.
+              <span className="createSpan">
+                <Button
+                  variant="success"
+                  className="button"
+                  onClick={handleCreateClick}
+                >
+                  Create Challenge
+                </Button>
+                {showCreateDialog && (
+                  <CreateChallenge
+                    show={showCreateDialog}
+                    onHide={() => setShowCreateDialog(false)}
+                  />
+                )}
+              </span>
+            </span> :
+            <span>Hello there, please log in to take the challenges.</span> 
+          }
         </div>
       </Col>
     </Row>

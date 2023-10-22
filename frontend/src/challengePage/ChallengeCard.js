@@ -53,7 +53,7 @@ const ChallengeCard = ({ challenge, user, setPoints }) => {
           </div>
           <Card.Text>{challenge.description}</Card.Text>
           {todo ? (
-            <Button className="btn-success" onClick={handleTodo}>
+            <Button className="btn-success" onClick={handleTodo} disabled={!user} >
               + {challenge.carbon_credits} P
             </Button>
           ) : (
