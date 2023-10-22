@@ -31,7 +31,7 @@ const NavigationBar = () => {
     <Navbar expand="lg" className="bg-success bar-bottom">
       <Container>
         <Navbar.Brand as={Link} to="/" className="text-white">
-          <FontAwesomeIcon icon={faSeedling} /> Your CO2{" "}
+          <FontAwesomeIcon icon={faSeedling} /> Your CO<sub>2</sub>{" "}
           <FontAwesomeIcon icon={faSeedling} />
         </Navbar.Brand>
         <Navbar.Toggle
